@@ -31,7 +31,9 @@ gem 'spring',      group: :development
 
 gem 'sass', '~> 3.2.19'
 
+# for cool deployment
+gem 'uberspacify'
+gem 'capistrano', '~> 2.12'
 
 gem "alchemy_cms", github: "magiclabs/alchemy_cms", branch: "master"
 gem "alchemy-devise", github: "magiclabs/alchemy-devise", branch: "master"
-gem "capistrano", "~> 2.15.5", group: "development"
