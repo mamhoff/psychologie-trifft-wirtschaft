@@ -1,0 +1,6 @@
+- cache(element) do
+  = element_view_for(element) do |el|
+    .image_images
+      - element.contents.gallery_pictures.each do |image|
+        .image_image class=image.essence.css_class
+          = render_essence_view(image, image_size: "160x120")

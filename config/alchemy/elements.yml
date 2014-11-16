@@ -2,18 +2,16 @@
 #
 # For further informations please see http://guides.alchemy-cms.com/create_elements.html
 
-- name: article
-  hint: true
-  unique: true
+- name: image
+  picture_gallery: true
+
+- name: testimonial
   contents:
-  - name: headline
-    type: EssenceText
-    default: :article_headline
-    hint: true
-  - name: picture
-    type: EssencePicture
-    hint: true
-  - name: text
-    type: EssenceRichtext
-    default: :article_text
-    hint: true
+    - name: quote
+      type: EssenceText
+      validate:
+        - presence
+    - name: logo
+      type: EssencePicture
+      validate:
+        - presence
