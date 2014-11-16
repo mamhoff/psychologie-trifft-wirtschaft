@@ -2,11 +2,14 @@
 #
 # For further informations please see http://guides.alchemy-cms.com/create_elements.html
 
-- name: image
+- name: gallery
   picture_gallery: true
-
+  
 - name: testimonial
   contents:
+    - name: company
+      type: EssenceText
+      validate: [presence]
     - name: quote
       type: EssenceText
       validate:

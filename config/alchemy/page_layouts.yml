@@ -5,4 +5,4 @@
 - name: home
   unique: true
   cells: [main, coachings, trainings, orgdev, contact]
-  elements: [image, testimonial]
+  elements: [gallery, testimonial]

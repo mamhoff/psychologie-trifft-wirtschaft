@@ -1,0 +1,8 @@
+- cache(element) do
+  = element_view_for(element) do |el|
+    .company
+      = el.render :company
+    .quote
+      = el.render :quote
+    .logo
+      = el.render :logo
