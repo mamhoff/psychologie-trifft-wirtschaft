@@ -1,4 +1,4 @@
-r# encoding: UTF-8
+# encoding: UTF-8
 #
 # == This is the global Alchemy configuration file
 #
@@ -83,8 +83,8 @@ image_output_format: jpg
 default_language:
   code: de
   name: Deutsch
-  page_layout: index
-  frontpage_name: Index
+  page_layout: home
+  frontpage_name: Startseite
 
 # === Mailer Settings:
 #
