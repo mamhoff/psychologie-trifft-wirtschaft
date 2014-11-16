@@ -4,7 +4,7 @@
 
 - name: gallery
   picture_gallery: true
-  
+
 - name: testimonial
   contents:
     - name: company
@@ -18,3 +18,29 @@
       type: EssencePicture
       validate:
         - presence
+
+- name: contact_form
+  contents:
+  - name: mail_from
+    type: EssenceText
+    validate:
+    - presence
+    - format: email
+  - name: mail_to
+    type: EssenceText
+    validate:
+    - presence
+    - format: email
+  - name: subject
+    type: EssenceText
+    validate:
+    - presence
+  - name: success_page
+    type: EssenceSelect
+    validate:
+    - presence
+
+- name: description
+  contents:
+    - name: description
+      type: EssenceRichtext

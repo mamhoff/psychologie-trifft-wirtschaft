@@ -3,10 +3,10 @@
 
 
 - name: coachings
-  elements: [gallery, testimonial]
+  elements: [gallery, testimonial, description, contact_form]
 - name: trainings
-  elements: [gallery, testimonial]
+  elements: [gallery, testimonial, description, contact_form]
 - name: orgdev
-  elements: [gallery, testimonial]
+  elements: [gallery, testimonial, description, contact_form]
 - name: contact
   elements: []
