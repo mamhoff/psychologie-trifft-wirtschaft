@@ -27,14 +27,14 @@ gem 'spring',      group: :development
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'pry-rails', group: [:development, :test]
 
 # for funnier templates
 gem 'slim'
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
-gem 'sass', '~> 3.2.19' # version conflicts. this one works. 
+gem 'sass', '~> 3.2.19' # version conflicts. this one works.
 
 
 # for cool deployment
