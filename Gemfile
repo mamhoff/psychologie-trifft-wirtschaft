@@ -29,11 +29,13 @@ gem 'spring',      group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'sass', '~> 3.2.19'
-
 # for funnier templates
 gem 'slim'
 gem 'slim-rails'
+gem 'bootstrap-sass'
+gem 'bootswatch-rails'
+gem 'sass', '~> 3.2.19' # version conflicts. this one works. 
+
 
 # for cool deployment
 gem 'uberspacify'
