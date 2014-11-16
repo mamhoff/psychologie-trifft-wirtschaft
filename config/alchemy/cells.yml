@@ -1,0 +1,12 @@
+- name: main
+  elements: [image, testimonial]
+
+
+- name: coachings
+  elements: [image, testimonial]
+- name: trainings
+  elements: [image, testimonial]
+- name: orgdev
+  elements: [image, testimonial]
+- name: contact
+  elements: []
