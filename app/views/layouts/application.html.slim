@@ -7,6 +7,7 @@ head
   = csrf_meta_tags
 body
   = render 'layouts/nav'
-  = yield
-  = alchemy_preview_mode_code
-  = render "alchemy/menubar"
+  .container
+    = yield
+    = alchemy_preview_mode_code
+    = render "alchemy/menubar"
