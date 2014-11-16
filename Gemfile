@@ -36,6 +36,8 @@ gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'sass', '~> 3.2.19' # version conflicts. this one works.
 
+# for nicer forms
+gem 'simple_form'
 
 # for cool deployment
 gem 'uberspacify'
