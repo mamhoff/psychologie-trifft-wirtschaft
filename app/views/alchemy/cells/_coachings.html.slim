@@ -1,2 +1,9 @@
-= render_elements from_cell: 'coachings', only: ['gallery']
-= render_elements from_cell: 'coachings', only: ['contact_form']
+.row
+  .col-md-12
+    = render_elements from_cell: 'coachings', only: ['gallery']
+.row
+  .col-sm-4
+    = render_elements from_cell: 'coachings', only: ['description']
+  = render_elements from_cell: 'coachings', only: ['testimonial']
+  .col-md-4
+    = render_elements from_cell: 'coachings', only: ['contact_form']
