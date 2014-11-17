@@ -1,13 +1,13 @@
 doctype html
 html
-head
-  = render_meta_data
-  = stylesheet_link_tag 'application', media: 'all'
-  = javascript_include_tag 'application'
-  = csrf_meta_tags
-body
-  = render 'layouts/nav'
-  .container
-    = yield
-    = alchemy_preview_mode_code
-    = render "alchemy/menubar"
+  head
+    = render_meta_data
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body
+    = render 'layouts/nav'
+    .container
+      = yield
+      = alchemy_preview_mode_code
+      = render "alchemy/menubar"
