@@ -34,14 +34,14 @@ gem 'slim'
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
-gem 'sass', '~> 3.2.19' # version conflicts. this one works.
+gem 'sass' , '~> 3.2.19' # version conflicts. this one works.
 
 # for nicer forms
-gem 'simple_form'
+gem 'simple_form', '3.1.0.rc2'
 
 # for cool deployment
 gem 'uberspacify'
 gem 'capistrano', '~> 2.12'
 
-gem "alchemy_cms", github: "magiclabs/alchemy_cms", branch: "master"
+gem "alchemy_cms", github: "mamhoff/alchemy_cms", branch: "free-simple-forms"
 gem "alchemy-devise", github: "magiclabs/alchemy-devise", branch: "master"
