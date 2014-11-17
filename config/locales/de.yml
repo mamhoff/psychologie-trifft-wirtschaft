@@ -19,6 +19,6 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-de:
-  new_message: "Kontakt"
-  send_message: "Senden"
+en:
+  new_message: "New Message"
+  send_message: "Send Message"
