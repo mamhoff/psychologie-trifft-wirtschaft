@@ -1,0 +1,11 @@
+.modal-dialog {
+    z-index: 1500;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-horizontal .control-label {
+  font-family: $font-family-sans-serif;
+}
