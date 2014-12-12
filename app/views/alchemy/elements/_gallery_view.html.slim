@@ -8,8 +8,8 @@
             title: (image.essence.title.blank? ? nil : image.essence.title), \
             class: (image.essence.css_class.blank? ? "img-responsive" : "img-responsive #{image.essence.css_class}") )
           - if image.essence.caption.present?
-            figcaption.overlay-caption
-              h4= image.essence.caption
+            figcaption
+              = image.essence.caption
     - else
       .carousel.slide id="gallery-#{element.id}" data-interval=""
         ol.carousel-indicators
@@ -24,7 +24,7 @@
                 class: (image.essence.css_class.blank? ? nil : image.essence.css_class) )
               - if image.essence.caption.present?
                   figcaption.carousel-caption
-                    h4= image.essence.caption
+                    = image.essence.caption
         a.left.carousel-control href="#gallery-#{element.id}" role="button" data-slide="prev"
           span.glyphicon.glyphicon-chevron-left aria-hidden="true"
           span.sr-only Previous

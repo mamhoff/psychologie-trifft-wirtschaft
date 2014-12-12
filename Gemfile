@@ -36,6 +36,9 @@ gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'sass' , '~> 3.2.19' # version conflicts. this one works.
 
+# jquery plugin fun
+gem 'jquery-scrollto-rails'
+
 # for nicer forms
 gem 'simple_form', '3.1.0.rc2'
 

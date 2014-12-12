@@ -5,6 +5,12 @@
 - name: gallery
   picture_gallery: true
 
+- name: title
+  contents:
+    - name: title
+      type: EssenceText
+      validate: [presence]
+
 - name: testimonial
   contents:
     - name: company

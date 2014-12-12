@@ -1,5 +1,9 @@
 //= require jquery
 //= require bootstrap-sprockets
+//= require jquery.scrollTo
+//= require jquery-localscroll
+//= require jquery-parallax
+
 
 var showErrorModals = function() {
   $('.has-error').parents('.modal').modal('show')
@@ -15,8 +19,10 @@ var resizeSections = function(){
 var startupFunctions = function() {
   showErrorModals();
   resizeSections();
+  $.localScroll({offset: {top: -60}});
 };
 
 $(document).ready(startupFunctions);
 $(document).ajaxStop(startupFunctions);
 $(window).resize(resizeSections);
+
