@@ -1,12 +1,8 @@
-- name: main
-  elements: [title, gallery, testimonial]
-
-
 - name: coachings
-  elements: [title, gallery, testimonial, description, contact_form]
+  elements: [title, image, testimonial, description, contact_form]
 - name: trainings
-  elements: [title, gallery, testimonial, description, contact_form]
+  elements: [title, image, testimonial, description, contact_form]
 - name: orgdev
-  elements: [title, gallery, testimonial, description, contact_form]
+  elements: [title, image, testimonial, description, contact_form]
 - name: contact
   elements: []

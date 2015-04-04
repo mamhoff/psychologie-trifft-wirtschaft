@@ -2,8 +2,17 @@
 #
 # For further informations please see http://guides.alchemy-cms.com/create_elements.html
 
-- name: gallery
-  picture_gallery: true
+- name: logo
+  contents:
+    - name: image
+      type: EssencePicture
+      validate: [presence]
+
+- name: logo_text
+  contents:
+  - name: logo_text
+    type: EssenceHTML
+    validate: [presence]
 
 - name: title
   contents:

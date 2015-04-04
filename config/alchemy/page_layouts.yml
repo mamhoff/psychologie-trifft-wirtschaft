@@ -6,3 +6,9 @@
   unique: true
   cells: [main, coachings, trainings, orgdev, contact]
   elements: [title, gallery, testimonial, description, contact_form]
+
+- name: header
+  layoutpage: true
+  unique: true
+  elements: [logo, title]
+  autogenerate: [logo, title]
