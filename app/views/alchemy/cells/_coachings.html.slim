@@ -1,10 +1,6 @@
-.hero-unit
-  = render_elements from_cell: 'coachings', only: ['gallery']
-  h2= render_elements from_cell: 'coachings', only: ['title']
-.container.content
-  .row
-    .col-sm-4
-      = render_elements from_cell: 'coachings', only: ['description']
-    = render_elements from_cell: 'coachings', only: ['testimonial']
-    .col-md-4
-      = render_elements from_cell: 'coachings', only: ['contact_form']
+.row
+  .col-sm-3.col-xs-offset-1
+    = render_elements from_cell: 'coachings', only: ["nav_image"]
+  .col-xs-11.col-sm-6.col-xs-offset-1.col-sm-offset-0
+    = render_elements from_cell: 'coachings', except: ["nav_image"]
+

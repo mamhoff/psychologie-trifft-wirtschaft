@@ -4,14 +4,20 @@
 
 - name: logo
   contents:
-    - name: image
-      type: EssencePicture
-      validate: [presence]
+  - name: image
+    type: EssencePicture
+    validate: [presence]
 
 - name: logo_text
   contents:
   - name: logo_text
     type: EssenceHtml
+    validate: [presence]
+
+- name: nav_image
+  contents:
+  - name: nav_image
+    type: EssencePicture
     validate: [presence]
 
 - name: title

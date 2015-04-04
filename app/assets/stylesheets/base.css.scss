@@ -5,16 +5,29 @@
   margin-top: 20px;
 }
 
+.nav_image > img {
+  border-radius: 50%;
+}
+
+.navbar {
+  background-color: white;
+}
 @media (min-width: $screen-sm-min) {
   .logo > img {
     float: right;
   }
+
+  .nav_image {
+    float: right;
+  }
   .logo-text {
-    margin-top: 65px;
+    margin-top: 40px;
   }
 }
 
-
+.section {
+  margin-top: 65px;
+}
 .modal-dialog {
     z-index: 1500;
 }
