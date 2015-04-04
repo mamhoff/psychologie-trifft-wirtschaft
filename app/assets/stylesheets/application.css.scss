@@ -1,11 +1,11 @@
 // First import journal variables
-@import "bootswatch/journal/variables";
+@import "bootswatch/paper/variables";
 
 // Then bootstrap itself
 @import "bootstrap";
 
 // And finally bootswatch style itself
-@import "bootswatch/journal/bootswatch";
+@import "bootswatch/paper/bootswatch";
 
 // Whatever application styles you have go last
 @import "base";
