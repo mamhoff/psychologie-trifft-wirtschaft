@@ -10,5 +10,5 @@
 - name: header
   layoutpage: true
   unique: true
-  elements: [logo, title]
-  autogenerate: [logo, title]
+  elements: [logo, logo_text]
+  autogenerate: [logo, logo_text]

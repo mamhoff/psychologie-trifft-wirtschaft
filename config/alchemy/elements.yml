@@ -11,7 +11,7 @@
 - name: logo_text
   contents:
   - name: logo_text
-    type: EssenceHTML
+    type: EssenceHtml
     validate: [presence]
 
 - name: title
