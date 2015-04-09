@@ -122,6 +122,8 @@ GEM
       rack
     erubis (2.7.0)
     execjs (2.2.2)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     fssm (0.2.10)
     highline (1.6.21)
     hike (1.2.3)
@@ -260,6 +262,7 @@ DEPENDENCIES
   bootstrap-sass
   bootswatch-rails
   capistrano (~> 2.12)
+  font-awesome-rails
   jbuilder (~> 2.0)
   jquery-scrollto-rails
   mysql

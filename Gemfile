@@ -34,6 +34,7 @@ gem 'slim'
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
+gem "font-awesome-rails"
 gem 'sass' , '~> 3.2.19' # version conflicts. this one works.
 
 # jquery plugin fun
