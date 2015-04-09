@@ -1,26 +1,25 @@
-.well
-  h3= t('know_more')
+.contact_form
   button.btn.btn-primary.btn-lg type="button" data-toggle="modal" data-target="#contact-form-#{element.id}"
     = t('new_message')
 
-.modal.fade id="contact-form-#{element.id}" tabindex="-1" role="dialog" aria-labelledby="Contact" aria-hidden="true"
-  .modal-dialog
-    .modal-content
-      = simple_form_for(@message ||= Alchemy::Message.new, html: { class: "form-horizontal"}) do |form|
-        .modal-header
-          button type="button" class="close" data-dismiss="modal"
-            span aria-hidden="true"
-            | &times;
-            span.sr-only Close
-          h4.modal-title id="#contact-form-#{element.id}-label"
-            = t('new_message')
-        .modal-body
-          .col-md-12
-            = form.input :lastname
-            = form.input :email
-            = form.input :message, :as => :text, input_html: {rows: 10}
-            = form.hidden_field :contact_form_id, :value => element.id
-          .clearfix
-        .modal-footer
-          button type="button" class="btn btn-default" data-dismiss="modal" Close
-          = form.button :submit, class: "btn btn-primary", value: raw(t('send_message'))
+  .modal.fade id="contact-form-#{element.id}" tabindex="-1" role="dialog" aria-labelledby="Contact" aria-hidden="true"
+    .modal-dialog
+      .modal-content
+        = simple_form_for(@message ||= Alchemy::Message.new, html: { class: "form-horizontal"}) do |form|
+          .modal-header
+            button type="button" class="close" data-dismiss="modal"
+              span aria-hidden="true"
+              | &times;
+              span.sr-only Close
+            h4.modal-title id="#contact-form-#{element.id}-label"
+              = t('new_message')
+          .modal-body
+            .col-md-12
+              = form.input :lastname
+              = form.input :email
+              = form.input :message, :as => :text, input_html: {rows: 10}
+              = form.hidden_field :contact_form_id, :value => element.id
+            .clearfix
+          .modal-footer
+            button type="button" class="btn btn-default" data-dismiss="modal" Close
+            = form.button :submit, class: "btn btn-primary", value: raw(t('send_message'))
