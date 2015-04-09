@@ -1,29 +1,70 @@
-.logo-text {
+.logo_text {
+  text-align: center;
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+  }
   font-family: $font-family-serif;
   font-size: 40px;
   line-height: 45px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
-.nav_image > img {
+.logo, .nav_image {
+  > img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    > img {
+      float: right;
+    }
+  }
+}
+
+.title {
+  > h3 {
+    font-family: $font-family-serif;
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+
+button.icon {
+  background-color: darkgrey;
+  color: white;
+  display: block;
   border-radius: 50%;
+  border: none;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  > i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.collapse.in + button {
+  transform: rotate(180deg);
 }
 
 .navbar {
   background-color: white;
 }
-@media (min-width: $screen-sm-min) {
-  .logo > img {
-    float: right;
-  }
 
-  .nav_image {
-    float: right;
-  }
-  .logo-text {
-    margin-top: 40px;
-  }
+.testimonial-logo {
+  width: 100%;
 }
+
 
 .section {
   margin-top: 65px;
@@ -42,27 +83,13 @@ textarea {
 
 body { padding-top: 180px; }
 
-.hero-unit {
-  position: relative;
-  h1, h2 {
-    position: absolute;
-    margin-left: 3em;
-    left: 0px;
-    bottom: 0px;
-    margin-bottom: 1.5em;
-    color: white;
-    padding: 5px 25px 15px;
-    background-color: rgba(0,0,0,0.3);
-  }
-}
-
 p {
+  font-family: $font-family-serif;
   font-size: 18.75px;
 }
 
-.container.content {
-  padding: 2em 0;
-
+#fullpage {
+  padding: 2em;
 }
 
 
