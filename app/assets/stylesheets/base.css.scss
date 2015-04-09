@@ -26,10 +26,17 @@
 }
 
 .title {
+  @media (min-width: $screen-lg-min) {
+    float: right;
+  }
   > h3 {
     font-family: $font-family-serif;
     text-align: center;
     font-size: 24px;
+
+    @media (min-width: $screen-lg-min) {
+      width: 200px;
+    }
   }
 }
 

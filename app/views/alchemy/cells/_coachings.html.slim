@@ -12,7 +12,5 @@
       .description.col-xs-12
         = render_elements from_cell: 'coachings', only: ["description"]
         = render_elements from_cell: 'coachings', only: ["contact_form"]
-    button.icon type="button" data-toggle="collapse" data-target=".coachingsDetails" aria-expanded="false" aria-controls="coachingDetails"
+    button.icon type="button" data-toggle="collapse" data-target=".coachingsDetails" aria-expanded="false" aria-controls="coachingsDetails"
       = fa_icon "chevron-down 2x"
-  .coachingsDetails.visible-md-3.col-md-3.collapse
-    = render_elements from_cell: 'coachings', only: ["testimonial"]
