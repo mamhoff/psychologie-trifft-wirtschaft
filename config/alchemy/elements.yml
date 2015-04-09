@@ -61,6 +61,11 @@
     validate:
     - presence
 
+- name: teaser
+  contents:
+    - name: teaser
+      type: EssenceRichtext
+      validate: [presence]
 - name: description
   contents:
     - name: description
