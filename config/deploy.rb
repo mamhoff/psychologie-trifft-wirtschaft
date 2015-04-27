@@ -1,37 +1,48 @@
-# include uberspacify base recipes
-require 'uberspacify/base'
+# config valid only for current version of Capistrano
+lock '3.4.0'
 
-# comment this if you don't use MySQL
-require 'uberspacify/mysql'
+set :application, 'my_app_name'
+set :repo_url, 'git@example.com:me/my_repo.git'
 
-# the Uberspace server you are on
-server 'horologium.uberspace.de', :web, :app, :db, :primary => true
+# Default branch is :master
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-# your Uberspace username
-set :user, 'htholen'
+# Default deploy_to directory is /var/www/my_app_name
+# set :deploy_to, '/var/www/my_app_name'
 
-# a name for your app, [a-z0-9] should be safe, will be used for your gemset,
-# databases, directories, etc.
-set :application, 'ptw'
+# Default value for :scm is :git
+# set :scm, :git
 
-# the repo where your code is hosted
-set :scm, :git
-set :repository, 'git@github.com:mamhoff/psychologie-trifft-wirtschaft.git'
+# Default value for :format is :pretty
+# set :format, :pretty
 
-# optional stuff from here
+# Default value for :log_level is :debug
+# set :log_level, :debug
 
-# By default, your app will be available in the root of your Uberspace. If you
-# have your own domain and its DNS records pointed to your Uberspace, you can
-# configure it here.
-# set :domain, 'www.dummyapp.com'
+# Default value for :pty is false
+# set :pty, true
 
-# By default, uberspacify will generate a random port number for Passenger to
-# listen on. This is fine, since only Apache will use it. Your app will always
-# be available on port 80 and 443 from the outside. However, if you'd like to
-# set this yourself, go ahead.
-# set :passenger_port, 55555
+# Default value for :linked_files is []
+# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
-# By default, Ruby Enterprise Edition 1.8.7 is used for Uberspace. If you
-# prefer Ruby 1.9 or any other version, please refer to the RVM documentation
-# at https://rvm.io/integration/capistrano/ and set this variable.
-set :rvm_ruby_string, '2.1.1'
+# Default value for linked_dirs is []
+# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+# Default value for keep_releases is 5
+# set :keep_releases, 5
+
+namespace :deploy do
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
+
+end
