@@ -24,7 +24,7 @@ require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
 
 # I'll continue with this once all the rest works.
-#require 'alchemy/capistrano3'
+require 'alchemy/capistrano'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }

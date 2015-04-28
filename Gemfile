@@ -39,10 +39,10 @@ gem "font-awesome-rails"
 # gem 'jquery-scrollto-rails'
 
 # for nicer forms
-gem 'simple_form', '3.1.0.rc2'
+gem 'simple_form'
 
 # for cool deployment
 gem 'capistrano'
 
-gem "alchemy_cms", path: '../../magiclabs/alchemy_cms'
+gem "alchemy_cms", github: 'mamhoff/alchemy_cms', branch: 'capistrano3'
 gem "alchemy-devise", github: 'AlchemyCMS/alchemy-devise', branch: 'master'
