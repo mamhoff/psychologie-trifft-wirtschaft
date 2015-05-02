@@ -20,7 +20,7 @@ gem 'sass-rails'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'unicorn', group: :production
+gem 'unicorn-rails', group: :production
 
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
@@ -34,6 +34,7 @@ gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem "font-awesome-rails"
+gem 'uglifier'
 
 # jquery plugin fun
 # gem 'jquery-scrollto-rails'
@@ -46,7 +47,6 @@ gem 'capistrano'
 gem 'capistrano-uberspace', github: 'mamhoff/capistrano-uberspace', branch: 'master', group: :development, require: false
 gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
-gem 'unicorn-rails'
 
 gem "alchemy_cms", github: 'mamhoff/alchemy_cms', branch: 'capistrano3'
 gem "alchemy-devise", github: 'AlchemyCMS/alchemy-devise', branch: 'master'

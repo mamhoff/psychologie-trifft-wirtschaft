@@ -289,6 +289,9 @@ GEM
     tvdeyen-handles_sortable_columns (0.1.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (2.7.1)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
     unicorn (4.9.0)
       kgio (~> 2.6)
       rack
@@ -320,5 +323,5 @@ DEPENDENCIES
   simple_form
   slim
   slim-rails
-  unicorn
+  uglifier
   unicorn-rails
