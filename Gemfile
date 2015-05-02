@@ -27,15 +27,13 @@ gem 'capistrano-rails', group: :development
 
 # Use debugger
 gem 'pry-rails', group: [:development, :test]
-
+gem 'pry'
 # for funnier templates
 gem 'slim'
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem "font-awesome-rails"
-
-gem 'request_store'
 
 # jquery plugin fun
 # gem 'jquery-scrollto-rails'
@@ -46,6 +44,9 @@ gem 'simple_form'
 # for cool deployment
 gem 'capistrano'
 gem 'capistrano-uberspace', path: '../../magiclabs/capistrano-uberspace'
+gem 'capistrano-secrets-yml', '~> 1.0.0'
+
+gem 'unicorn-rails'
 
 gem "alchemy_cms", github: 'mamhoff/alchemy_cms', branch: 'capistrano3'
 gem "alchemy-devise", github: 'AlchemyCMS/alchemy-devise', branch: 'master'
