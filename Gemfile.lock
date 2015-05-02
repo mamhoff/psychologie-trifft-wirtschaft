@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/alchemy_cms.git
-  revision: 82553c171057d7dd6426c97ccfeb70d0d1fcc3c4
+  revision: 43d1574f060b45862990ac5482eee262805f8aad
   branch: capistrano3
   specs:
     alchemy_cms (3.2.0.beta)
@@ -40,14 +40,13 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
-  revision: 0f878a484813e77dc090cb410c4c33315b21eb71
+  revision: 89093a476f3e465b50769f7c4b0d8cbdb26a3dab
   branch: master
   specs:
     capistrano-uberspace (0.0.1)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
       capistrano-secrets-yml (~> 1.0.0)
-      daemon_controller (>= 1.0.0)
       mysql2 (>= 0.3.11)
       unicorn-rails
 
@@ -151,7 +150,6 @@ GEM
       compass (~> 1.0.0)
       sass-rails (<= 5.0.1)
       sprockets (< 2.13)
-    daemon_controller (1.2.0)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
