@@ -39,7 +39,7 @@ GIT
       tvdeyen-handles_sortable_columns (~> 0.1.5)
 
 GIT
-  remote: git://github.com/mamhoff/uberspacify.git
+  remote: git://github.com/mamhoff/capistrano-uberspace.git
   revision: a3249f7b2f5a0f4ea0a46fa09e0747fcf6c7b0b0
   branch: master
   specs:
