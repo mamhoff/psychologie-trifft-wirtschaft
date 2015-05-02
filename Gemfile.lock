@@ -38,8 +38,10 @@ GIT
       turbolinks (~> 2.5)
       tvdeyen-handles_sortable_columns (~> 0.1.5)
 
-PATH
-  remote: ../../magiclabs/capistrano-uberspace
+GIT
+  remote: git://github.com/mamhoff/uberspacify.git
+  revision: 59c83684f6792669d7c185448013d38cb1f2102b
+  branch: master
   specs:
     capistrano-uberspace (0.0.1)
       capistrano (~> 3.1)
