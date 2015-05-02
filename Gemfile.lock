@@ -40,7 +40,7 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/uberspacify.git
-  revision: 59c83684f6792669d7c185448013d38cb1f2102b
+  revision: a3249f7b2f5a0f4ea0a46fa09e0747fcf6c7b0b0
   branch: master
   specs:
     capistrano-uberspace (0.0.1)
