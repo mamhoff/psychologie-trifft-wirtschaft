@@ -24,6 +24,7 @@ require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
 
 # I'll continue with this once all the rest works.
+require 'capistrano/uberspace'
 require 'alchemy/capistrano'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
