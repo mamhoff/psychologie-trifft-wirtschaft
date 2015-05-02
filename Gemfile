@@ -43,7 +43,7 @@ gem 'simple_form'
 
 # for cool deployment
 gem 'capistrano'
-gem 'capistrano-uberspace', path: '../../magiclabs/capistrano-uberspace'
+gem 'capistrano-uberspace', github: 'mamhoff/uberspacify', branch: 'master'
 gem 'capistrano-secrets-yml', '~> 1.0.0'
 
 gem 'unicorn-rails'
