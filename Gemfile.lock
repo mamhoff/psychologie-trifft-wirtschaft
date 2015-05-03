@@ -40,14 +40,14 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/capistrano-alchemy.git
-  revision: 53ad3164f0c55d12bec13612bdf5197c6936fd40
+  revision: ff8a82dfef11d35d47350973444c25b9cca65922
   branch: master
   specs:
     capistrano-alchemy (0.0.1)
 
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
-  revision: e4243d3f927a1f20f9a4eb08c6af39b5801c5986
+  revision: 79cdb294b34e56250a691167a2d2643386eced89
   branch: master
   specs:
     capistrano-uberspace (0.0.1)
