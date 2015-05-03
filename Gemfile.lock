@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/AlchemyCMS/alchemy-devise.git
-  revision: 9acd927cc1e5848c1fe7bd226858e1403606fd10
+  revision: 57e12d9a6417167476aff5424bff75664e3e6f35
   branch: master
   specs:
     alchemy-devise (2.2.0.beta)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/AlchemyCMS/alchemy_cms.git
-  revision: decc95fbe8305b6d25f0fbc8d07794077ea2a00c
+  revision: 66db3eb663a3b0d3c93b4d33b102cf30c8571697
   branch: master
   specs:
     alchemy_cms (3.2.0.beta)
