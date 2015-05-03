@@ -47,7 +47,7 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
-  revision: 79cdb294b34e56250a691167a2d2643386eced89
+  revision: 2e8da5aa33d79e6c684d831fb1f9da81f3af4f6e
   branch: master
   specs:
     capistrano-uberspace (0.0.1)
