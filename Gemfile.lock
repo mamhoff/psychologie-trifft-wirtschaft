@@ -8,9 +8,9 @@ GIT
       devise (~> 3.4)
 
 GIT
-  remote: git://github.com/mamhoff/alchemy_cms.git
-  revision: 07346a6bb871629001799bb177129a07894af77d
-  branch: capistrano3
+  remote: git://github.com/AlchemyCMS/alchemy_cms.git
+  revision: decc95fbe8305b6d25f0fbc8d07794077ea2a00c
+  branch: master
   specs:
     alchemy_cms (3.2.0.beta)
       actionpack-page_caching (~> 1.0.0)
@@ -37,6 +37,13 @@ GIT
       spinner.rb
       turbolinks (~> 2.5)
       tvdeyen-handles_sortable_columns (~> 0.1.5)
+
+GIT
+  remote: git://github.com/mamhoff/capistrano-alchemy.git
+  revision: 238d3b333fcf834a723a2f6c4aa8dd8e0fc06c5a
+  branch: master
+  specs:
+    capistrano-alchemy (0.0.1)
 
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
@@ -309,6 +316,7 @@ DEPENDENCIES
   bootstrap-sass
   bootswatch-rails
   capistrano
+  capistrano-alchemy!
   capistrano-rails
   capistrano-secrets-yml (~> 1.0.0)
   capistrano-uberspace!

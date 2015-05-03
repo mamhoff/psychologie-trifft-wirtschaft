@@ -44,8 +44,9 @@ gem 'simple_form'
 # for cool deployment
 gem 'capistrano'
 gem 'capistrano-uberspace', github: 'mamhoff/capistrano-uberspace', branch: 'master', group: :development
+gem 'capistrano-alchemy', github: 'mamhoff/capistrano-alchemy', branch: 'master', group: :development
 gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
 
-gem "alchemy_cms", github: 'mamhoff/alchemy_cms', branch: 'capistrano3'
+gem "alchemy_cms", github: 'AlchemyCMS/alchemy_cms', branch: 'master'
 gem "alchemy-devise", github: 'AlchemyCMS/alchemy-devise', branch: 'master'
