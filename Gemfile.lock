@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/alchemy_cms.git
-  revision: 94db7be6488f9e40115fe40a4794a1e56af7d632
+  revision: 1e38e034ee8cb6d191d642405ade32d6c96cb719
   branch: capistrano3
   specs:
     alchemy_cms (3.2.0.beta)
