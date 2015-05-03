@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/alchemy_cms.git
-  revision: 1e38e034ee8cb6d191d642405ade32d6c96cb719
+  revision: 07346a6bb871629001799bb177129a07894af77d
   branch: capistrano3
   specs:
     alchemy_cms (3.2.0.beta)
@@ -40,7 +40,7 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
-  revision: 1daeb18ea2ed258efc4780f28348da8cd12c8f9f
+  revision: e4243d3f927a1f20f9a4eb08c6af39b5801c5986
   branch: master
   specs:
     capistrano-uberspace (0.0.1)
