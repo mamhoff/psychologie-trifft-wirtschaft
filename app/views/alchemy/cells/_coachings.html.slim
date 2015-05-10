@@ -1,16 +1,2 @@
 .row
-  .col-xs-12.col-sm-3
-    .row
-      .col-xs-12
-        = render_elements from_cell: 'coachings', only: ["nav_image"]
-    .row
-      .col-xs-12
-        = render_elements from_cell: 'coachings', only: ["title"]
-  .col-xs-12.col-sm-9.col-md-6
-    = render_elements from_cell: 'coachings', only: ["teaser"]
-    .coachingsDetails.row.collapse
-      .description.col-xs-12
-        = render_elements from_cell: 'coachings', only: ["description"]
-        = render_elements from_cell: 'coachings', only: ["contact_form"]
-    button.icon type="button" data-toggle="collapse" data-target=".coachingsDetails" aria-expanded="false" aria-controls="coachingsDetails"
-      = fa_icon "chevron-down 2x"
+  = render_elements from_cell: 'coachings', only: ['offer']

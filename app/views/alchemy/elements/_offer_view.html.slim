@@ -8,7 +8,8 @@
     = el.render :teaser
     .full-description.collapse id="#{el.render(:section).parameterize}Details"
       = el.render :description
-    .expander
-      hr
-      button.icon type="button" data-toggle="collapse" data-target="##{el.render(:section).parameterize}Details" aria-expanded="false" aria-controls="#{el.render :section}Details"
-        = fa_icon "chevron-down 2x"
+    .row
+      .expander.col-xs-12
+        hr
+        button.icon type="button" data-toggle="collapse" data-target="##{el.render(:section).parameterize}Details" aria-expanded="false" aria-controls="#{el.render :section}Details"
+          = fa_icon "chevron-down 2x"
