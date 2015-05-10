@@ -1,6 +1,7 @@
 // import fontawesome
 @import "font-awesome";
 
+@import "bootstrap_custom";
 // First import journal variables
 @import "bootswatch/paper/variables";
 
@@ -9,6 +10,7 @@
 
 // And finally bootswatch style itself
 @import "bootswatch/paper/bootswatch";
+
 
 // Whatever application styles you have go last
 @import "base";

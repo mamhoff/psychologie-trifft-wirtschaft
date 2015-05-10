@@ -1,16 +1,2 @@
 .row
-  .col-xs-12.col-sm-3
-    .row
-      .col-xs-12
-        = render_elements from_cell: 'orgdev', only: ["nav_image"]
-    .row
-      .col-xs-12
-        = render_elements from_cell: 'orgdev', only: ["title"]
-  .col-xs-12.col-sm-9.col-md-6
-    = render_elements from_cell: 'orgdev', only: ["teaser"]
-    .orgdevDetails.row.collapse
-      .description.col-xs-12
-        = render_elements from_cell: 'orgdev', only: ["description"]
-        = render_elements from_cell: 'orgdev', only: ["contact_form"]
-    button.icon type="button" data-toggle="collapse" data-target=".orgdevDetails" aria-expanded="false" aria-controls="orgdevDetails"
-      = fa_icon "chevron-down 2x"
+  = render_elements from_cell: 'orgdev', only: ['offer']

@@ -6,22 +6,31 @@
   contents:
     - name: image
       type: EssencePicture
-      validate: [presence]
+      validate:
+        - presence: true
     - name: logo_text
       type: EssenceHtml
-      validate: [presence]
+      validate:
+        - presence: true
 
 - name: offer
   contents:
     - name: nav_image
       type: EssencePicture
-      validate: [presence]
+      validate:
+        - presence: true
+    - name: section
+      type: EssenceText
+      validate:
+        - presence: true
     - name: title
       type: EssenceText
-      validate: [presence]
+      validate:
+        - presence: true
     - name: teaser
       type: EssenceRichtext
-      validate: [presence]
+      validate:
+        - presence: true
     - name: description
       type: EssenceRichtext
 
@@ -29,34 +38,35 @@
   contents:
     - name: company
       type: EssenceText
-      validate: [presence]
+      validate:
+        - presence: true
     - name: quote
       type: EssenceText
       validate:
-        - presence
+        - presence: true
     - name: logo
       type: EssencePicture
       validate:
-        - presence
+        - presence: true
 
 - name: contact_form
   contents:
     - name: mail_from
       type: EssenceText
       validate:
-      - presence
-      - format: email
+        - presence: true
+        - format: email
     - name: mail_to
       type: EssenceText
       validate:
-      - presence
-      - format: email
+        - presence: true
+        - format: email
     - name: subject
       type: EssenceText
       validate:
-      - presence
+        - presence: true
     - name: success_page
       type: EssenceSelect
       validate:
-      - presence
+        - presence: true
 
