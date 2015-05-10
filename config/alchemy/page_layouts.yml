@@ -5,7 +5,7 @@
 - name: home
   unique: true
   cells: [main, coachings, trainings, orgdev, contact]
-  elements: [nav_image, title, gallery, testimonial, teaser, description, contact_form]
+  elements: []
 
 - name: header
   layoutpage: true

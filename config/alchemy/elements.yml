@@ -4,27 +4,26 @@
 
 - name: logo
   contents:
-  - name: image
-    type: EssencePicture
-    validate: [presence]
+    - name: image
+      type: EssencePicture
+      validate: [presence]
+    - name: logo_text
+      type: EssenceHtml
+      validate: [presence]
 
-- name: logo_text
+- name: offer
   contents:
-  - name: logo_text
-    type: EssenceHtml
-    validate: [presence]
-
-- name: nav_image
-  contents:
-  - name: nav_image
-    type: EssencePicture
-    validate: [presence]
-
-- name: title
-  contents:
+    - name: nav_image
+      type: EssencePicture
+      validate: [presence]
     - name: title
       type: EssenceText
       validate: [presence]
+    - name: teaser
+      type: EssenceRichtext
+      validate: [presence]
+    - name: description
+      type: EssenceRichtext
 
 - name: testimonial
   contents:
@@ -42,31 +41,22 @@
 
 - name: contact_form
   contents:
-  - name: mail_from
-    type: EssenceText
-    validate:
-    - presence
-    - format: email
-  - name: mail_to
-    type: EssenceText
-    validate:
-    - presence
-    - format: email
-  - name: subject
-    type: EssenceText
-    validate:
-    - presence
-  - name: success_page
-    type: EssenceSelect
-    validate:
-    - presence
+    - name: mail_from
+      type: EssenceText
+      validate:
+      - presence
+      - format: email
+    - name: mail_to
+      type: EssenceText
+      validate:
+      - presence
+      - format: email
+    - name: subject
+      type: EssenceText
+      validate:
+      - presence
+    - name: success_page
+      type: EssenceSelect
+      validate:
+      - presence
 
-- name: teaser
-  contents:
-    - name: teaser
-      type: EssenceRichtext
-      validate: [presence]
-- name: description
-  contents:
-    - name: description
-      type: EssenceRichtext

@@ -1,8 +1,8 @@
 - name: coachings
-  elements: [title, nav_image, testimonial, teaser, description, contact_form]
+  elements: [offer, contact_form]
 - name: trainings
-  elements: [title, nav_image, testimonial, teaser, description, contact_form]
+  elements: [offer, contact_form]
 - name: orgdev
-  elements: [title, nav_image, testimonial, teaser, description, contact_form]
+  elements: [offer, contact_form]
 - name: contact
   elements: []
