@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/AlchemyCMS/alchemy_cms.git
-  revision: 66db3eb663a3b0d3c93b4d33b102cf30c8571697
+  revision: 1742c133c2c651109626cfc09b6af1455c2d1b1c
   branch: master
   specs:
     alchemy_cms (3.2.0.beta)
@@ -40,14 +40,14 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/capistrano-alchemy.git
-  revision: ff8a82dfef11d35d47350973444c25b9cca65922
-  branch: master
+  revision: 0976021243d9304b7f7f29e22881b2d1a70df0b7
+  branch: doc-and-export
   specs:
     capistrano-alchemy (0.0.1)
 
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
-  revision: 74eb3a4b0d011e22cb5735951f1e47d3ac74ffbc
+  revision: 95e0d577512228c0a3163b339ead1aecbc4cd501
   branch: master
   specs:
     capistrano-uberspace (0.0.1)
@@ -101,7 +101,7 @@ GEM
       tzinfo (~> 1.1)
     acts-as-taggable-on (3.5.0)
       activerecord (>= 3.2, < 5)
-    acts_as_list (0.7.0)
+    acts_as_list (0.7.2)
       activerecord (>= 3.0)
     addressable (2.3.8)
     arel (6.0.0)
@@ -188,7 +188,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.3)
-    loofah (2.0.1)
+    loofah (2.0.2)
       nokogiri (>= 1.5.9)
     magiclabs-userstamp (2.1.0)
     mail (2.6.3)
@@ -212,7 +212,7 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
-    rack (1.6.0)
+    rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.1)
@@ -277,7 +277,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.2.4)
+    sprockets-rails (2.3.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
