@@ -1,0 +1,7 @@
+- cache(element) do
+  = element_view_for(element) do |el|
+    h4= el.render :title
+    ul.topics
+      - element.contents.where(name: ['topic']).each do |content|
+        li
+          = render_essence_view(content)

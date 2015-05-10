@@ -7,6 +7,12 @@
   cells: [main, coachings, trainings, orgdev, contact]
   elements: []
 
+- name: static
+  elements:
+    - static_page
+  autogenerate:
+    - static_page
+
 - name: header
   layoutpage: true
   unique: true

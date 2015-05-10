@@ -34,6 +34,16 @@
     - name: description
       type: EssenceRichtext
 
+- name: topics
+  contents:
+    - name: title
+      type: EssenceText
+      validate:
+      - presence: true
+  available_contents:
+    - name: topic
+      type: EssenceText
+
 - name: testimonial
   contents:
     - name: company
@@ -69,4 +79,11 @@
       type: EssenceSelect
       validate:
         - presence: true
+
+- name: static_page
+  contents:
+    - name: title
+      type: EssenceText
+    - name: body
+      type: EssenceRichtext
 

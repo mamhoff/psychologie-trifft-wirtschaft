@@ -6,11 +6,12 @@
     h4= el.render :section
     h2= el.render :title
     = el.render :teaser
-    .full-description.collapse id="#{el.render(:section).parameterize}Details"
+    .full-description.collapse id="#{element.cell.name}Details"
       = el.render :description
+      = render_elements from_cell: element.cell.name, only: ['topics']
       = render_elements from_cell: element.cell.name, only: ['contact_form']
     .row
       .expander.col-xs-12
         hr
-        button.icon type="button" data-toggle="collapse" data-target="##{el.render(:section).parameterize}Details" aria-expanded="false" aria-controls="#{el.render :section}Details"
+        button.icon type="button" data-toggle="collapse" data-target="##{element.cell.name}Details" aria-expanded="false" aria-controls="#{el.render :section}Details"
           = fa_icon "chevron-down 2x"

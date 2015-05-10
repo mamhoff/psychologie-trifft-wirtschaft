@@ -1,0 +1,5 @@
+= element_editor_for(element) do |el|
+  = el.edit :title
+  - element.contents.where(name: ['topic']).each do |content|
+    = render_essence_editor content
+  p = render_new_content_link(element)
