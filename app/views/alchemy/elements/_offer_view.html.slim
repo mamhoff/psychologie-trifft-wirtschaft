@@ -8,6 +8,7 @@
     = el.render :teaser
     .full-description.collapse id="#{el.render(:section).parameterize}Details"
       = el.render :description
+      = render_elements from_cell: element.cell.name, only: ['contact_form']
     .row
       .expander.col-xs-12
         hr
