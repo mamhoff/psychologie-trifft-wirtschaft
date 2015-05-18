@@ -40,8 +40,8 @@ GIT
 
 GIT
   remote: git://github.com/mamhoff/capistrano-alchemy.git
-  revision: 0976021243d9304b7f7f29e22881b2d1a70df0b7
-  branch: doc-and-export
+  revision: ff8a82dfef11d35d47350973444c25b9cca65922
+  branch: master
   specs:
     capistrano-alchemy (0.0.1)
 
