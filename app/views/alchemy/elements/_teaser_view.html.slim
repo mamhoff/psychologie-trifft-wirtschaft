@@ -1,0 +1,9 @@
+= element_view_for(element) do |el|
+  = link_to element.contents.find_by(name: "link").essence.link do
+    .col-xs-12.col-sm-3
+      .nav_image
+        = el.render :image, size: "200x200"
+    .col-xs-12.col-sm-9.col-md-6
+      h4= el.render :super_title
+      h2= el.render :title
+      = el.render :body
