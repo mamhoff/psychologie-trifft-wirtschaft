@@ -4,8 +4,7 @@
 
 - name: home
   unique: true
-  cells: [main, coachings, trainings, orgdev, contact]
-  elements: []
+  elements: [teaser, quote]
 
 - name: static
   elements:
@@ -18,3 +17,9 @@
   unique: true
   elements: [logo, logo_text]
   autogenerate: [logo, logo_text]
+
+- name: footer
+  layoutpage: true
+  unique: true
+  elements: [address, link, contact_form]
+

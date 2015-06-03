@@ -13,13 +13,17 @@
       validate:
         - presence: true
 
-- name: offer
+- name: teaser
   contents:
-    - name: nav_image
+    - name: link
+      type: EssenceLink
+      validate:
+        - presence: true
+    - name: image
       type: EssencePicture
       validate:
         - presence: true
-    - name: section
+    - name: super_title
       type: EssenceText
       validate:
         - presence: true
@@ -27,12 +31,10 @@
       type: EssenceText
       validate:
         - presence: true
-    - name: teaser
+    - name: body
       type: EssenceRichtext
       validate:
         - presence: true
-    - name: description
-      type: EssenceRichtext
 
 - name: topics
   contents:
@@ -46,16 +48,12 @@
 
 - name: testimonial
   contents:
-    - name: company
+    - name: citee
       type: EssenceText
       validate:
         - presence: true
     - name: quote
       type: EssenceText
-      validate:
-        - presence: true
-    - name: logo
-      type: EssencePicture
       validate:
         - presence: true
 
