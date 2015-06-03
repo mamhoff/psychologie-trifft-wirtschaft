@@ -1,8 +1,0 @@
-- name: coachings
-  elements: [offer, contact_form, topics]
-- name: trainings
-  elements: [offer, contact_form, topics]
-- name: orgdev
-  elements: [offer, contact_form, topics]
-- name: contact
-  elements: []
