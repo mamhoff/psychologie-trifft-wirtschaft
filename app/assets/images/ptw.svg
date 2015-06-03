@@ -24,8 +24,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1440"
-     inkscape:window-height="836"
+     inkscape:window-width="1280"
+     inkscape:window-height="736"
      id="namedview3076"
      showgrid="false"
      inkscape:zoom="2.96"
@@ -54,15 +54,19 @@
      id="path2985"
      style="fill:#88b467;fill-opacity:1;stroke:none"
      inkscape:connector-curvature="0" />
-  <text
-     x="99.013351"
-     y="127.74084"
-     id="text2987"
-     xml:space="preserve"
-     style="font-size:23.1404953px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:FontAwesome;-inkscape-font-specification:Bitstream Charter Bold"
-     sodipodi:linespacing="125%"><tspan
-       x="99.013351"
-       y="127.74084"
-       id="tspan2989"
-       style="font-size:83.30578613px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter Bold">PtW</tspan></text>
+  <path
+     inkscape:connector-curvature="0"
+     id="path2986"
+     style="font-size:83.30578613px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter Bold"
+     d="m 22.679218,127.74084 24.575207,0 0,-4.08199 -5.914711,-0.41653 -1.249586,-1.33289 0,-14.99504 c 2.499171,0.16661 4.415208,0.24992 5.664793,0.24992 13.995358,0 21.826116,-6.9977 21.826116,-18.493887 0,-11.996021 -7.330925,-16.827768 -22.74248,-16.827768 l -22.492562,0 0,4.081983 5.498182,0.416529 1.249587,1.166281 0,44.401982 -1.499504,1.33289 -4.915042,0.41653 0,4.08199 m 17.41091,-25.57488 0,-25.49157 4.3319,0 c 7.580819,0 11.662811,4.415215 11.662811,12.329257 0,8.830404 -4.33191,13.328923 -12.995703,13.328923 -0.916363,0 -1.916034,-0.0833 -2.999008,-0.16661" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path2988"
+     style="font-size:83.30578613px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter Bold"
+     d="m 76.235726,93.252242 0,24.241988 c 0,4.24859 0.08331,6.91438 2.999008,8.83041 1.916031,1.33289 4.165292,1.83273 6.914381,1.83273 3.415533,0 7.747443,-0.83306 12.745785,-2.66579 l 0,-3.99868 c -1.666114,0.41653 -3.415539,0.58314 -5.414876,0.58314 -5.498177,0 -6.914381,-2.16595 -6.914381,-8.08066 l 0,-20.743138 12.329257,0 0,-4.998348 -12.329257,0 0,-10.329917 -5.248264,0 -4.331901,8.663802 -6.164628,3.498843 0,3.16562 5.414876,0" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path2990"
+     style="font-size:83.30578613px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter Bold"
+     d="m 117.92376,127.74084 8.08067,0 12.66247,-42.652565 12.9124,42.652565 8.08066,0 12.74579,-50.649921 5.24826,-1.166281 0,-4.081983 -18.16066,0 0,4.081983 5.49818,0.99967 0.99967,1.166281 -8.74711,34.988431 -12.32925,-41.236365 -8.41389,0 -11.99603,40.320005 -9.33025,-34.571906 0.66645,-1.166281 5.16496,-0.583141 0,-3.998677 -21.826118,0 0,4.081983 5.248268,1.166281 13.49553,50.649921" />
 </svg>
