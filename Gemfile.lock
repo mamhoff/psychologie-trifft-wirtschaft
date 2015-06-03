@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/AlchemyCMS/alchemy_cms.git
-  revision: 1742c133c2c651109626cfc09b6af1455c2d1b1c
+  revision: 84fb82fd3b2b3a05d4ba9db299a70cd0fcfb67c9
   branch: master
   specs:
     alchemy_cms (3.2.0.beta)
@@ -164,10 +164,10 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    dragonfly (1.0.9)
+    dragonfly (1.0.10)
       addressable (~> 2.3)
       multi_json (~> 1.0)
-      rack
+      rack (>= 1.3.0)
     erubis (2.7.0)
     execjs (2.5.2)
     ffi (1.9.8)
@@ -181,7 +181,7 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (5.0.3)
+    jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.2)
     kaminari (0.16.3)
@@ -241,7 +241,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (10.4.2)
-    rb-fsevent (0.9.4)
+    rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     request_store (1.1.0)
