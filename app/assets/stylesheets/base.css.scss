@@ -1,3 +1,10 @@
+button#contact {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+}
+
 .logo_text {
   text-align: center;
   @media (min-width: $screen-sm-min) {
