@@ -80,8 +80,22 @@
 
 - name: static_page
   contents:
+    - name: image
+      type: EssencePicture
+      validate:
+        - presence: true
+    - name: super_title
+      type: EssenceText
+      validate:
+        - presence: true
     - name: title
       type: EssenceText
+      validate:
+        - presence: true
+    - name: teaser
+      type: EssenceRichtext
     - name: body
       type: EssenceRichtext
+      validate:
+        - presence: true
 

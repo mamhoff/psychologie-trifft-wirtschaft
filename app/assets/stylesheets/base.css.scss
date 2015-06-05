@@ -5,7 +5,7 @@ button#contact {
   font-weight: bold;
 }
 
-.logo_text {
+.logo_text > p {
   text-align: center;
   @media (min-width: $screen-sm-min) {
     text-align: left;

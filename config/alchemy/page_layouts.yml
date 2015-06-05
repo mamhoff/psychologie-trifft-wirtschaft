@@ -15,8 +15,8 @@
 - name: header
   layoutpage: true
   unique: true
-  elements: [logo, logo_text]
-  autogenerate: [logo, logo_text]
+  elements: [logo]
+  autogenerate: [logo]
 
 - name: footer
   layoutpage: true
