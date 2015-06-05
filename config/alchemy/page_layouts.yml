@@ -4,19 +4,24 @@
 
 - name: home
   unique: true
-  elements: [teaser, quote]
+  elements:
+    - teaser
+    - testimonial
 
 - name: static
   elements:
     - static_page
+    - testimonial
   autogenerate:
     - static_page
 
 - name: header
   layoutpage: true
   unique: true
-  elements: [logo]
-  autogenerate: [logo]
+  elements:
+    - logo
+  autogenerate:
+    - logo
 
 - name: footer
   layoutpage: true

@@ -1,9 +1,4 @@
 - cache(element) do
   = element_view_for(element) do |el|
-    blockquote
-      p.quote
-        = el.render :quote
-      footer
-        = el.render :company
-        .testimonial-logo
-          = el.render :logo, options = {}, html_options = { class: "img-responsive" }
+    = el.render :quote
+    = el.render :citee
