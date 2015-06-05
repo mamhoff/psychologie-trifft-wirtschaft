@@ -1,5 +1,11 @@
 - cache(element) do
   = element_view_for(element) do |el|
-    h1= el.render :title
-    .body
-      = el.render :body
+    .container-fluid
+      .row
+        = el.render :image, {}, class: "img-responsive"
+        h1= el.render :title
+    .container
+      .row
+        .col-sm-9.col-sm-offset-3
+          .body
+            = el.render :body
