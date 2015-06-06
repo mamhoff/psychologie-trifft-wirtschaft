@@ -1,18 +1,20 @@
 doctype html
 html
   head
-    meta name="viewport" content="width=device-width,initial-scale=1.0"
-    = render_meta_data
-    = stylesheet_link_tag 'application', media: 'all'
-    = javascript_include_tag 'application'
-    = csrf_meta_tags
+  meta name="viewport" content="width=device-width,initial-scale=1.0"
+  = render_meta_data
+  = stylesheet_link_tag 'application', media: 'all'
+  = javascript_include_tag 'application'
+  = csrf_meta_tags
   body
-    = render 'layouts/nav'
-    = yield
-    = alchemy_preview_mode_code
-    = render "alchemy/menubar"
-    #footer
-        .container
-            .row
-                .col-xs-12
-                    = render_elements from_page: "footer"
+  = render 'layouts/nav'
+  = yield
+  = alchemy_preview_mode_code
+  = render "alchemy/menubar"
+  #footer.shadow
+    .container
+      .row
+        = render_elements from_page: "footer", only: ["address"]
+        .col-md-8.link-container
+          .links
+            = render_elements from_page: "footer", only: ["link"]

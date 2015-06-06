@@ -5,7 +5,6 @@
         i.fa.fa-bars
       a.navbar-brand href="/"
         = image_tag "ptw.svg"
-      = render_elements from_page: "header", only: "contact_form"
     .navbar-collapse.collapse.navbar-responsive-collapse
       = render_navigation({from_page: @root_page}, {class: "nav  navbar-nav navbar-right"})
 

@@ -20,11 +20,12 @@
   unique: true
   elements:
     - logo
+    - contact_form
   autogenerate:
     - logo
 
 - name: footer
   layoutpage: true
   unique: true
-  elements: [address, link, contact_form]
+  elements: [address, link]
 

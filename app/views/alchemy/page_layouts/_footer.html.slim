@@ -1,4 +1,7 @@
 .container-fluid
   .row
-    = render_elements, except: ["contact_form"]
+    = render_elements, except: ["link"]
+    .col-sm-8
+      .footer-nav
+        = render_elements, only: ["link"]
 = render_elements, only: ["contact_form"]

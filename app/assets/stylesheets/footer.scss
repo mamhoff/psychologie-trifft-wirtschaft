@@ -5,4 +5,17 @@
 
   color: white;
   font-family: $font-family-serif;
+
+  .link-container {
+    height:120px;
+    position: relative;
+    .links {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      a {
+        margin-left: 15px;
+      }
+    }
+  }
 }
