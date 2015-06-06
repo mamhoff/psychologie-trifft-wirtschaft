@@ -3,7 +3,6 @@
 # For further informations please see http://guides.alchemy-cms.com/create_page_layouts.html
 
 - name: home
-  unique: true
   elements:
     - teaser
     - testimonial
