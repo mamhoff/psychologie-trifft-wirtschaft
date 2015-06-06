@@ -11,3 +11,8 @@ html
     = yield
     = alchemy_preview_mode_code
     = render "alchemy/menubar"
+    #footer
+        .container
+            .row
+                .col-xs-12
+                    = render_elements from_page: "footer"

@@ -99,3 +99,38 @@
       validate:
         - presence: true
 
+
+- name: address
+  contents:
+    - name: company_name
+      type: EssenceText
+      validate:
+        - presence: true
+    - name: name
+      type: EssenceText
+      validate:
+        - presence: true
+    - name: street
+      type: EssenceText
+      validate:
+        - presence: true
+    - name: place
+      type: EssenceText
+      validate:
+        - presence: true
+    - name: phone
+      type: EssenceText
+      validate:
+        - presence: true
+    - name: email
+      type: EssenceText
+      validate:
+        - presence: true
+
+- name: link
+  contents:
+    - name: link
+      type: EssenceText
+      settings:
+        linkable: true
+
