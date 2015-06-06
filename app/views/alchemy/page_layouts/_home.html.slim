@@ -2,5 +2,7 @@
   .row.section#header
     = render_elements(from_page: "header")
   .row
-    = render_elements
+    = render_elements only: [:teaser]
+  .row
+    = render_elements only: [:testimonial]
 button#contact.btn.btn-primary Kontakt

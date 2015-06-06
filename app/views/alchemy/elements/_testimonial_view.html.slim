@@ -1,4 +1,9 @@
 - cache(element) do
   = element_view_for(element) do |el|
-    = el.render :quote
-    = el.render :citee
+    .col-md-4
+      .quote-circle
+        blockquote
+          .quote-content
+            p= el.render :quote
+          footer
+            cite= el.render :citee
