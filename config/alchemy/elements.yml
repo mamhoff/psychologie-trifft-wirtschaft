@@ -78,7 +78,7 @@
       validate:
         - presence: true
 
-- name: static_page
+- name: static_page_header
   contents:
     - name: image
       type: EssencePicture
@@ -88,6 +88,9 @@
       type: EssenceText
       validate:
         - presence: true
+
+- name: static_page
+  contents:
     - name: title
       type: EssenceText
       validate:

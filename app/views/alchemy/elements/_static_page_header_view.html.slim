@@ -1,0 +1,9 @@
+- cache(element) do
+  = element_view_for(element) do |el|
+    .top-background
+      = el.render :image, {size: "1300x400"}, class: "shadow head-image"
+      .container
+        .row.relative
+          .col-sm-8.col-sm-offset-4
+            .inside-image
+              h1= el.render :super_title

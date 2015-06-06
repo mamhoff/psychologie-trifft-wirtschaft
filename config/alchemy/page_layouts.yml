@@ -10,6 +10,7 @@
 
 - name: static
   elements:
+    - static_page_header
     - static_page
     - testimonial
   autogenerate:
