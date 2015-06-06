@@ -5,15 +5,7 @@
         i.fa.fa-bars
       a.navbar-brand href="/"
         = image_tag "ptw.svg"
+      = render_elements from_page: "header", only: "contact_form"
     .navbar-collapse.collapse.navbar-responsive-collapse
-      ul.nav.navbar-nav.navbar-right
-        li
-          a href="/#trainings" Trainings
-        li
-          a href="/#coachings" Coaching
-        li
-          a href="/#orgdev" Organisationsberatung
-        /  li
-        /     a href="#" Team
-        li
-          a href="/kontakt" Kontakt
+      = render_navigation({from_page: @root_page}, {class: "nav  navbar-nav navbar-right"})
+
