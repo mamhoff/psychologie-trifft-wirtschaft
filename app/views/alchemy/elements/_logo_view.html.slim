@@ -1,7 +1,7 @@
 - cache(element) do
   .col-xs-12.col-sm-4
     = element_view_for(element) do |el|
-      = image_tag "ptw.svg"
+      = image_tag "ptw.svg", class: "circle shadow"
       // = el.render :image, size: "300x300"
   .col-xs-12.col-sm-8
     = element_view_for(element) do |el|

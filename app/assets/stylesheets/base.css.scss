@@ -5,18 +5,37 @@ button#contact {
   font-weight: bold;
 }
 
-.quote-circle {
-  position: relative;
-  background-color: #B39967;
+.testimonial {
+  margin: 25px;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    &:last-child {
+      display: none;
+    }
+  }
+}
+
+.circle {
   border-radius: 50%;
+  max-width: 300px;
+}
+.shadow {
+  box-shadow: rgba(0,0,0,0.6) 0 0 5px;
+}
+
+.quote {
+  position: relative;
+  background-color: lighten($green, 10%);
+  border: $green 2px solid;
   text-align: center;
-  width: 100%;
+  margin: 10% auto;
   &:before {
     content: "";
     display: block;
     padding-top: 100%;
   }
 }
+
 blockquote {
   padding: 15%;
   text-align: center;
@@ -25,23 +44,23 @@ blockquote {
   bottom: 0;
   left: 0;
   right: 0;
-  color: white;
   margin: 0 auto;
   border: 0;
   .quote-content {
     display: flex;
-    height: 70%;
+    height: 80%;
     justify-content: center;
 
     p {
+      font-size: 13px;
       margin: auto;
     }
   }
 
   footer {
-    height: 30%;
-    border-top: 1px solid white;
-    color: white;
+    height: 20%;
+    border-top: 1px solid $gray;
+    color: $gray;
     font-family: $font-family-serif;
     padding-top: 5%;
     &:before {
@@ -62,13 +81,16 @@ blockquote {
   margin-top: 40px;
 }
 
+.logo img {
+  background-color: #88b467;
+}
+
 .logo, .nav_image {
   > img {
     max-width: 100%;
     max-height: 100%;
     display: block;
     margin: 0 auto 30px;
-    border-radius: 50%;
   }
 
   @media (min-width: $screen-sm-min) {
