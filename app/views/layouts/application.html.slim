@@ -11,6 +11,7 @@ html
   = yield
   = alchemy_preview_mode_code
   = render "alchemy/menubar"
+  = render_elements(from_page: "header", only: ["contact_form"])
   #footer.shadow
     .container
       .row

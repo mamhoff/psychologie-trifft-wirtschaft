@@ -1,6 +1,6 @@
 #fullpage.container
   .row.section#header
-    = render_elements(from_page: "header") if current_page.urlname == "startseite"
+    = render_elements(from_page: "header", only: ["logo"]) if current_page.language_root
   = render_elements only: [:teaser]
   .row.testimonials
     = render_elements only: [:testimonial]
