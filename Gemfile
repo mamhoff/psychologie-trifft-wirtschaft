@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 # Use MySQL as the database for Active Record, just like on production
@@ -44,7 +43,7 @@ gem 'simple_form'
 # for cool deployment
 gem 'capistrano'
 gem 'capistrano-uberspace', github: 'mamhoff/capistrano-uberspace', branch: 'master', group: :development, require: false
-gem 'capistrano-alchemy', github: 'mamhoff/capistrano-alchemy', branch: 'master', group: :development, require: false
+gem 'capistrano-alchemy', github: 'AlchemyCMS/capistrano-alchemy', branch: 'master', group: :development, require: false
 gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
 

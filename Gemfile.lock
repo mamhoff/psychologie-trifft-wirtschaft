@@ -39,11 +39,12 @@ GIT
       tvdeyen-handles_sortable_columns (~> 0.1.5)
 
 GIT
-  remote: git://github.com/mamhoff/capistrano-alchemy.git
-  revision: ff8a82dfef11d35d47350973444c25b9cca65922
+  remote: git://github.com/AlchemyCMS/capistrano-alchemy.git
+  revision: 5760054cbfcaf565ed944fb85b68cd0a36f54adf
   branch: master
   specs:
     capistrano-alchemy (0.0.1)
+      capistrano-rails (~> 1.1)
 
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
@@ -331,3 +332,6 @@ DEPENDENCIES
   slim-rails
   uglifier
   unicorn-rails
+
+BUNDLED WITH
+   1.10.5
