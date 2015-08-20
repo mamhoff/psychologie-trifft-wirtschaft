@@ -141,3 +141,10 @@
   contents:
     - name: snippet
       type: EssenceHtml
+
+- name: tag_manager_data_layer
+  contents:
+    - name: data_key
+      type: EssenceText
+    - name: data_value
+      type: EssenceText

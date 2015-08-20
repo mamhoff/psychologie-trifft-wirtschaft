@@ -5,11 +5,13 @@
 - name: home
   cache: false
   elements:
+    - tag_manager_data_layer
     - teaser
     - testimonial
 
 - name: static
   elements:
+    - tag_manager_data_layer
     - static_page_header
     - static_page
     - testimonial

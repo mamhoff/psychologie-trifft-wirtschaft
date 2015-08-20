@@ -8,6 +8,7 @@ html
     = javascript_include_tag 'application'
     = csrf_meta_tags
   body
+    = render 'layouts/tag_manager_data_layer', page: @page
     = render 'layouts/nav'
     = yield
     = alchemy_preview_mode_code

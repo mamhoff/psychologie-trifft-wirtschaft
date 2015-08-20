@@ -1,0 +1,7 @@
+<script>
+  dataLayer = [{
+<% page.elements.named('tag_manager_data_layer').each do |el| %>
+   '<%= el.content_by_name('data_key').ingredient %>': '<%= el.content_by_name('data_value').ingredient %>',
+<% end %>
+  }]
+</script>
