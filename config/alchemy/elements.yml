@@ -137,3 +137,7 @@
       settings:
         linkable: true
 
+- name: html_snippet
+  contents:
+    - name: snippet
+      type: EssenceHtml

@@ -1,22 +1,23 @@
 doctype html
 html
   head
-  meta name="viewport" content="width=device-width,initial-scale=1.0"
-  link rel="icon" type="image/vnd.microsoft.icon" href=image_path("ptw.ico")
-  = render_meta_data
-  = stylesheet_link_tag 'application', media: 'all'
-  = javascript_include_tag 'application'
-  = csrf_meta_tags
+    meta name="viewport" content="width=device-width,initial-scale=1.0"
+    link rel="icon" type="image/vnd.microsoft.icon" href=image_path("ptw.ico")
+    = render_meta_data
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
   body
-  = render 'layouts/nav'
-  = yield
-  = alchemy_preview_mode_code
-  = render "alchemy/menubar"
-  = render_elements(from_page: "header", only: ["contact_form"])
-  #footer.shadow
-    .container
-      .row
-        = render_elements from_page: "footer", only: ["address"]
-        .col-md-8.link-container
-          .links
-            = render_elements from_page: "footer", only: ["link"]
+    = render 'layouts/nav'
+    = yield
+    = alchemy_preview_mode_code
+    = render "alchemy/menubar"
+    = render_elements(from_page: "header", only: ["contact_form"])
+    #footer.shadow
+      .container
+        .row
+          = render_elements from_page: "footer", only: ["address"]
+          .col-md-8.link-container
+            .links
+              = render_elements from_page: "footer", only: ["link"]
+    = render_elements from_page: "footer", only: ["html_snippet"]
