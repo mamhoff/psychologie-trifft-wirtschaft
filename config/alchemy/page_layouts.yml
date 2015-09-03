@@ -15,6 +15,7 @@
     - static_page_header
     - static_page
     - testimonial
+    - html_snippet
   autogenerate:
     - static_page
 
