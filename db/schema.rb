@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190529173523) do
+ActiveRecord::Schema.define(version: 2019_05_29_174354) do
 
-  create_table "alchemy_attachments", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_attachments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "file_name"
     t.string "file_mime_type"
@@ -21,12 +21,11 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.integer "updater_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "cached_tag_list"
     t.string "file_uid"
     t.index ["file_uid"], name: "index_alchemy_attachments_on_file_uid"
   end
 
-  create_table "alchemy_cells", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_cells", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "page_id", null: false
     t.string "name"
     t.datetime "created_at", null: false
@@ -34,7 +33,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["page_id"], name: "index_alchemy_cells_on_page_id"
   end
 
-  create_table "alchemy_contents", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_contents", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "essence_type", null: false
     t.integer "essence_id", null: false
@@ -48,7 +47,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["essence_id", "essence_type"], name: "index_alchemy_contents_on_essence_id_and_essence_type", unique: true
   end
 
-  create_table "alchemy_elements", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_elements", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.integer "position"
     t.integer "page_id", null: false
@@ -60,19 +59,18 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.integer "creator_id"
     t.integer "updater_id"
     t.integer "cell_id"
-    t.text "cached_tag_list"
     t.integer "parent_element_id"
     t.index ["cell_id"], name: "index_alchemy_elements_on_cell_id"
     t.index ["page_id", "parent_element_id"], name: "index_alchemy_elements_on_page_id_and_parent_element_id"
     t.index ["page_id", "position"], name: "index_elements_on_page_id_and_position"
   end
 
-  create_table "alchemy_elements_alchemy_pages", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_elements_alchemy_pages", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "element_id"
     t.integer "page_id"
   end
 
-  create_table "alchemy_essence_booleans", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_essence_booleans", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.boolean "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -81,7 +79,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["value"], name: "index_alchemy_essence_booleans_on_value"
   end
 
-  create_table "alchemy_essence_dates", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_essence_dates", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.datetime "date"
     t.integer "creator_id"
     t.integer "updater_id"
@@ -89,7 +87,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "alchemy_essence_files", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_essence_files", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "attachment_id"
     t.string "title"
     t.string "css_class"
@@ -101,7 +99,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["attachment_id"], name: "index_alchemy_essence_files_on_attachment_id"
   end
 
-  create_table "alchemy_essence_htmls", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_essence_htmls", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.text "source"
     t.integer "creator_id"
     t.integer "updater_id"
@@ -109,7 +107,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "alchemy_essence_links", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_essence_links", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "link"
     t.string "link_title"
     t.string "link_target"
@@ -120,7 +118,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.integer "updater_id"
   end
 
-  create_table "alchemy_essence_pictures", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_essence_pictures", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "picture_id"
     t.string "caption"
     t.string "title"
@@ -140,7 +138,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["picture_id"], name: "index_alchemy_essence_pictures_on_picture_id"
   end
 
-  create_table "alchemy_essence_richtexts", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_essence_richtexts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.text "body"
     t.text "stripped_body"
     t.boolean "public"
@@ -150,7 +148,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "alchemy_essence_selects", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_essence_selects", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -159,7 +157,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["value"], name: "index_alchemy_essence_selects_on_value"
   end
 
-  create_table "alchemy_essence_texts", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_essence_texts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.text "body"
     t.string "link"
     t.string "link_title"
@@ -172,14 +170,14 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "alchemy_folded_pages", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_folded_pages", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "page_id", null: false
     t.integer "user_id", null: false
     t.boolean "folded", default: false
     t.index ["page_id", "user_id"], name: "index_alchemy_folded_pages_on_page_id_and_user_id", unique: true
   end
 
-  create_table "alchemy_languages", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_languages", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "language_code"
     t.string "frontpage_name"
@@ -198,7 +196,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["site_id"], name: "index_alchemy_languages_on_site_id"
   end
 
-  create_table "alchemy_legacy_page_urls", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_legacy_page_urls", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "urlname", null: false
     t.integer "page_id", null: false
     t.datetime "created_at", null: false
@@ -207,7 +205,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["urlname"], name: "index_alchemy_legacy_page_urls_on_urlname"
   end
 
-  create_table "alchemy_pages", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_pages", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "urlname"
     t.string "title"
@@ -232,7 +230,6 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.integer "creator_id"
     t.integer "updater_id"
     t.integer "language_id"
-    t.text "cached_tag_list"
     t.datetime "published_at"
     t.datetime "public_on"
     t.datetime "public_until"
@@ -245,7 +242,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["urlname"], name: "index_pages_on_urlname"
   end
 
-  create_table "alchemy_pictures", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_pictures", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "image_file_name"
     t.integer "image_file_width"
@@ -255,13 +252,12 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.integer "creator_id"
     t.integer "updater_id"
     t.string "upload_hash"
-    t.text "cached_tag_list"
     t.string "image_file_uid"
     t.integer "image_file_size"
     t.string "image_file_format"
   end
 
-  create_table "alchemy_sites", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_sites", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "host"
     t.string "name"
     t.datetime "created_at", null: false
@@ -273,7 +269,7 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["host"], name: "index_alchemy_sites_on_host"
   end
 
-  create_table "alchemy_users", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "alchemy_users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
     t.string "login"
@@ -305,29 +301,22 @@ ActiveRecord::Schema.define(version: 20190529173523) do
     t.index ["reset_password_token"], name: "index_alchemy_users_on_reset_password_token", unique: true
   end
 
-  create_table "taggings", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer "tag_id"
-    t.integer "taggable_id"
-    t.string "taggable_type"
-    t.integer "tagger_id"
-    t.string "tagger_type"
-    t.string "context"
-    t.datetime "created_at"
-    t.index ["context"], name: "index_taggings_on_context"
-    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
-    t.index ["tag_id"], name: "index_taggings_on_tag_id"
-    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
-    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
-    t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
-    t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
-    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
-    t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
+  create_table "gutentag_taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "tag_id", null: false
+    t.integer "taggable_id", null: false
+    t.string "taggable_type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tag_id", "taggable_id", "taggable_type"], name: "unique_taggings", unique: true
+    t.index ["tag_id"], name: "index_gutentag_taggings_on_tag_id"
+    t.index ["taggable_id", "taggable_type"], name: "index_gutentag_taggings_on_taggable_id_and_taggable_type"
   end
 
-  create_table "tags", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string "name", collation: "utf8_bin"
+  create_table "gutentag_tags", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
     t.integer "taggings_count", default: 0
-    t.index ["name"], name: "index_tags_on_name", unique: true
+    t.index ["name"], name: "index_gutentag_tags_on_name", unique: true
+    t.index ["taggings_count"], name: "index_gutentag_tags_on_taggings_count"
   end
 
   add_foreign_key "alchemy_cells", "alchemy_pages", column: "page_id", name: "alchemy_cells_page_id_fkey", on_update: :cascade, on_delete: :cascade
