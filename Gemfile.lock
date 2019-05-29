@@ -1,10 +1,14 @@
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
-  revision: abaa97469ae757739843fc49e721e957d518faf1
-  branch: master
+  revision: 187d03121914029bfe53cab2cacb57cfbd7f0843
+  branch: uberspace-6
   specs:
-    capistrano-uberspace (0.0.7)
+    capistrano-uberspace (0.0.1)
       capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+      capistrano-secrets-yml (~> 1.0.0)
+      mysql2 (>= 0.3.11)
+      unicorn-rails
 
 GEM
   remote: https://rubygems.org/
