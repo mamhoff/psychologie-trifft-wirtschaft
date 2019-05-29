@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_174354) do
     t.integer "updater_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "cached_tag_list"
     t.string "file_uid"
     t.index ["file_uid"], name: "index_alchemy_attachments_on_file_uid"
   end
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_174354) do
     t.integer "creator_id"
     t.integer "updater_id"
     t.integer "cell_id"
+    t.text "cached_tag_list"
     t.integer "parent_element_id"
     t.index ["cell_id"], name: "index_alchemy_elements_on_cell_id"
     t.index ["page_id", "parent_element_id"], name: "index_alchemy_elements_on_page_id_and_parent_element_id"
@@ -230,6 +232,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_174354) do
     t.integer "creator_id"
     t.integer "updater_id"
     t.integer "language_id"
+    t.text "cached_tag_list"
     t.datetime "published_at"
     t.datetime "public_on"
     t.datetime "public_until"
@@ -252,6 +255,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_174354) do
     t.integer "creator_id"
     t.integer "updater_id"
     t.string "upload_hash"
+    t.text "cached_tag_list"
     t.string "image_file_uid"
     t.integer "image_file_size"
     t.string "image_file_format"
@@ -317,6 +321,22 @@ ActiveRecord::Schema.define(version: 2019_05_29_174354) do
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_gutentag_tags_on_name", unique: true
     t.index ["taggings_count"], name: "index_gutentag_tags_on_taggings_count"
+  end
+
+  create_table "taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "tag_id"
+    t.integer "taggable_id"
+    t.string "taggable_type"
+    t.datetime "created_at"
+    t.index ["tag_id", "taggable_id", "taggable_type"], name: "unique_taggings", unique: true
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+    t.index ["taggable_id", "taggable_type"], name: "index_gutentag_taggings_on_taggable_id_and_taggable_type"
+  end
+
+  create_table "tags", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", collation: "utf8_bin"
+    t.integer "taggings_count", default: 0
+    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   add_foreign_key "alchemy_cells", "alchemy_pages", column: "page_id", name: "alchemy_cells_page_id_fkey", on_update: :cascade, on_delete: :cascade
