@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150503121133) do
+ActiveRecord::Schema.define(version: 20190529114437) do
 
   create_table "alchemy_attachments", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -50,20 +50,22 @@ ActiveRecord::Schema.define(version: 20150503121133) do
   add_index "alchemy_contents", ["element_id", "position"], name: "index_contents_on_element_id_and_position", using: :btree
 
   create_table "alchemy_elements", force: :cascade do |t|
-    t.string   "name",            limit: 255
-    t.integer  "position",        limit: 4
-    t.integer  "page_id",         limit: 4
-    t.boolean  "public",          limit: 1,     default: true
-    t.boolean  "folded",          limit: 1,     default: false
-    t.boolean  "unique",          limit: 1,     default: false
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
-    t.integer  "creator_id",      limit: 4
-    t.integer  "updater_id",      limit: 4
-    t.integer  "cell_id",         limit: 4
-    t.text     "cached_tag_list", limit: 65535
+    t.string   "name",              limit: 255
+    t.integer  "position",          limit: 4
+    t.integer  "page_id",           limit: 4
+    t.boolean  "public",                          default: true
+    t.boolean  "folded",                          default: false
+    t.boolean  "unique",                          default: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.integer  "creator_id",        limit: 4
+    t.integer  "updater_id",        limit: 4
+    t.integer  "cell_id",           limit: 4
+    t.text     "cached_tag_list",   limit: 65535
+    t.integer  "parent_element_id", limit: 4
   end
 
+  add_index "alchemy_elements", ["page_id", "parent_element_id"], name: "index_alchemy_elements_on_page_id_and_parent_element_id", using: :btree
   add_index "alchemy_elements", ["page_id", "position"], name: "index_elements_on_page_id_and_position", using: :btree
 
   create_table "alchemy_elements_alchemy_pages", id: false, force: :cascade do |t|
@@ -72,7 +74,7 @@ ActiveRecord::Schema.define(version: 20150503121133) do
   end
 
   create_table "alchemy_essence_booleans", force: :cascade do |t|
-    t.boolean  "value",      limit: 1
+    t.boolean  "value"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.integer  "creator_id", limit: 4
@@ -97,6 +99,7 @@ ActiveRecord::Schema.define(version: 20150503121133) do
     t.integer  "updater_id",    limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.string   "link_text",     limit: 255
   end
 
   create_table "alchemy_essence_htmls", force: :cascade do |t|
@@ -140,7 +143,7 @@ ActiveRecord::Schema.define(version: 20150503121133) do
   create_table "alchemy_essence_richtexts", force: :cascade do |t|
     t.text     "body",          limit: 65535
     t.text     "stripped_body", limit: 65535
-    t.boolean  "public",        limit: 1
+    t.boolean  "public"
     t.integer  "creator_id",    limit: 4
     t.integer  "updater_id",    limit: 4
     t.datetime "created_at",                  null: false
@@ -162,7 +165,7 @@ ActiveRecord::Schema.define(version: 20150503121133) do
     t.string   "link",            limit: 255
     t.string   "link_title",      limit: 255
     t.string   "link_class_name", limit: 255
-    t.boolean  "public",          limit: 1,     default: false
+    t.boolean  "public",                        default: false
     t.string   "link_target",     limit: 255
     t.integer  "creator_id",      limit: 4
     t.integer  "updater_id",      limit: 4
@@ -173,7 +176,7 @@ ActiveRecord::Schema.define(version: 20150503121133) do
   create_table "alchemy_folded_pages", force: :cascade do |t|
     t.integer "page_id", limit: 4
     t.integer "user_id", limit: 4
-    t.boolean "folded",  limit: 1, default: false
+    t.boolean "folded",            default: false
   end
 
   create_table "alchemy_languages", force: :cascade do |t|
@@ -181,14 +184,15 @@ ActiveRecord::Schema.define(version: 20150503121133) do
     t.string   "language_code",  limit: 255
     t.string   "frontpage_name", limit: 255
     t.string   "page_layout",    limit: 255, default: "intro"
-    t.boolean  "public",         limit: 1,   default: false
+    t.boolean  "public",                     default: false
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
     t.integer  "creator_id",     limit: 4
     t.integer  "updater_id",     limit: 4
-    t.boolean  "default",        limit: 1,   default: false
+    t.boolean  "default",                    default: false
     t.string   "country_code",   limit: 255, default: "",      null: false
     t.integer  "site_id",        limit: 4
+    t.string   "locale",         limit: 255
   end
 
   add_index "alchemy_languages", ["language_code", "country_code"], name: "index_alchemy_languages_on_language_code_and_country_code", using: :btree
@@ -209,7 +213,7 @@ ActiveRecord::Schema.define(version: 20150503121133) do
     t.string   "urlname",          limit: 255
     t.string   "title",            limit: 255
     t.string   "language_code",    limit: 255
-    t.boolean  "language_root",    limit: 1
+    t.boolean  "language_root"
     t.string   "page_layout",      limit: 255
     t.text     "meta_keywords",    limit: 65535
     t.text     "meta_description", limit: 65535
@@ -217,15 +221,15 @@ ActiveRecord::Schema.define(version: 20150503121133) do
     t.integer  "rgt",              limit: 4
     t.integer  "parent_id",        limit: 4
     t.integer  "depth",            limit: 4
-    t.boolean  "visible",          limit: 1,     default: false
-    t.boolean  "public",           limit: 1,     default: false
-    t.boolean  "locked",           limit: 1,     default: false
+    t.boolean  "visible",                        default: false
+    t.boolean  "public",                         default: false
+    t.boolean  "locked",                         default: false
     t.integer  "locked_by",        limit: 4
-    t.boolean  "restricted",       limit: 1,     default: false
-    t.boolean  "robot_index",      limit: 1,     default: true
-    t.boolean  "robot_follow",     limit: 1,     default: true
-    t.boolean  "sitemap",          limit: 1,     default: true
-    t.boolean  "layoutpage",       limit: 1,     default: false
+    t.boolean  "restricted",                     default: false
+    t.boolean  "robot_index",                    default: true
+    t.boolean  "robot_follow",                   default: true
+    t.boolean  "sitemap",                        default: true
+    t.boolean  "layoutpage",                     default: false
     t.datetime "created_at",                                     null: false
     t.datetime "updated_at",                                     null: false
     t.integer  "creator_id",       limit: 4
@@ -259,9 +263,9 @@ ActiveRecord::Schema.define(version: 20150503121133) do
     t.string   "name",                     limit: 255
     t.datetime "created_at",                                             null: false
     t.datetime "updated_at",                                             null: false
-    t.boolean  "public",                   limit: 1,     default: false
+    t.boolean  "public",                                 default: false
     t.text     "aliases",                  limit: 65535
-    t.boolean  "redirect_to_primary_host", limit: 1
+    t.boolean  "redirect_to_primary_host"
   end
 
   add_index "alchemy_sites", ["host", "public"], name: "alchemy_sites_public_hosts_idx", using: :btree
@@ -299,6 +303,12 @@ ActiveRecord::Schema.define(version: 20150503121133) do
   add_index "alchemy_users", ["lastname"], name: "index_alchemy_users_on_lastname", using: :btree
   add_index "alchemy_users", ["login"], name: "index_alchemy_users_on_login", unique: true, using: :btree
   add_index "alchemy_users", ["reset_password_token"], name: "index_alchemy_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "ar_internal_metadata", primary_key: "key", force: :cascade do |t|
+    t.string   "value",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id",        limit: 4

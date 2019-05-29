@@ -1,50 +1,41 @@
 GIT
   remote: git://github.com/AlchemyCMS/alchemy-devise.git
-  revision: 57e12d9a6417167476aff5424bff75664e3e6f35
-  branch: master
+  revision: 8c0a1e26efa7d2cd6c10ad51c8112fdae2fd86dc
+  branch: 3.3-stable
   specs:
-    alchemy-devise (2.2.0.beta)
-      alchemy_cms (>= 3.2.0.beta, < 4.0)
-      devise (~> 3.4)
+    alchemy-devise (3.3.0)
+      alchemy_cms (> 3.2, < 3.4)
+      devise (>= 3.5.4, < 4.0)
 
 GIT
   remote: git://github.com/AlchemyCMS/alchemy_cms.git
-  revision: 84fb82fd3b2b3a05d4ba9db299a70cd0fcfb67c9
-  branch: master
+  revision: ca0bc4d95c453a77fa6672847b0e5f4dee4f258f
+  branch: 3.3-stable
   specs:
-    alchemy_cms (3.2.0.beta)
+    alchemy_cms (3.3.3)
       actionpack-page_caching (~> 1.0.0)
-      active_model_serializers (~> 0.9)
+      active_model_serializers (~> 0.9.0)
       acts-as-taggable-on (~> 3.1)
       acts_as_list (~> 0.3)
       awesome_nested_set (~> 3.0.0)
       cancancan (~> 1.9)
       coffee-rails (~> 4.0)
-      compass-rails (~> 2.0, >= 2.0.4)
+      compass-rails (>= 2.0.4, < 4.0)
       dragonfly (~> 1.0.1)
-      jquery-rails (~> 4.0.3)
+      jquery-rails (~> 4.0)
       jquery-ui-rails (~> 5.0.0)
       kaminari (~> 0.15)
       magiclabs-userstamp (~> 2.1.0)
-      non-stupid-digest-assets (~> 1.0.3)
+      non-stupid-digest-assets (~> 1.0.8)
       rails (>= 4.2.0, < 5.0)
-      request_store (~> 1.1.0)
+      ransack (~> 1.4)
+      request_store (~> 1.2)
       responders (~> 2.0)
       sass-rails (~> 5.0)
       sassy-buttons (~> 0.2.6)
       select2-rails (>= 3.5.9.1, < 4.0)
       simple_form (~> 3.0)
-      spinner.rb
       turbolinks (~> 2.5)
-      tvdeyen-handles_sortable_columns (~> 0.1.5)
-
-GIT
-  remote: git://github.com/AlchemyCMS/capistrano-alchemy.git
-  revision: 5760054cbfcaf565ed944fb85b68cd0a36f54adf
-  branch: master
-  specs:
-    capistrano-alchemy (0.0.1)
-      capistrano-rails (~> 1.1)
 
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
@@ -82,8 +73,9 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_model_serializers (0.9.3)
+    active_model_serializers (0.9.7)
       activemodel (>= 3.2)
+      concurrent-ruby (~> 1.0)
     activejob (4.2.11.1)
       activesupport (= 4.2.11.1)
       globalid (>= 0.3.0)
@@ -101,27 +93,30 @@ GEM
       tzinfo (~> 1.1)
     acts-as-taggable-on (3.5.0)
       activerecord (>= 3.2, < 5)
-    acts_as_list (0.7.2)
+    acts_as_list (0.9.19)
       activerecord (>= 3.0)
-    addressable (2.3.8)
+    addressable (2.6.0)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (6.0.4)
     autoprefixer-rails (5.1.11)
       execjs
       json
-    awesome_nested_set (3.0.2)
+    awesome_nested_set (3.0.3)
       activerecord (>= 4.0.0, < 5)
-    bcrypt (3.1.10)
+    bcrypt (3.1.12)
     bootstrap-sass (3.3.4.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
     bootswatch-rails (3.2.4)
       railties (>= 3.1)
     builder (3.2.3)
-    cancancan (1.10.1)
+    cancancan (1.17.0)
     capistrano (3.4.0)
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
+    capistrano-alchemy (1.0.0)
+      capistrano-rails (~> 1.1)
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
@@ -131,15 +126,15 @@ GEM
     capistrano-secrets-yml (1.0.0)
       capistrano (>= 3.1)
       sshkit (>= 1.2.0)
-    chunky_png (1.3.4)
+    chunky_png (1.3.11)
     coderay (1.1.0)
-    coffee-rails (4.1.0)
+    coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.0)
+      railties (>= 4.0.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.1.1)
+    coffee-script-source (1.12.2)
     compass (1.0.3)
       chunky_png (~> 1.2)
       compass-core (~> 1.0.2)
@@ -152,39 +147,40 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    compass-rails (2.0.4)
+    compass-rails (3.1.0)
       compass (~> 1.0.0)
-      sass-rails (<= 5.0.1)
-      sprockets (< 2.13)
+      sass-rails (< 5.1)
+      sprockets (< 4.0)
+    concurrent-ruby (1.1.5)
     crass (1.0.4)
-    devise (3.4.1)
+    devise (3.5.10)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    dragonfly (1.0.10)
+    dragonfly (1.0.12)
       addressable (~> 2.3)
       multi_json (~> 1.0)
       rack (>= 1.3.0)
     erubis (2.7.0)
     execjs (2.5.2)
-    ffi (1.9.8)
+    ffi (1.11.1)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hike (1.2.3)
     i18n (0.7.0)
-    jquery-rails (4.0.3)
-      rails-dom-testing (~> 1.0)
+    jquery-rails (4.3.3)
+      rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.6)
-    kaminari (0.16.3)
+    kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.3)
@@ -205,7 +201,8 @@ GEM
     net-ssh (5.2.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    non-stupid-digest-assets (1.0.4)
+    non-stupid-digest-assets (1.0.9)
+      sprockets (>= 2.0)
     orm_adapter (0.5.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -213,6 +210,7 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    public_suffix (3.1.0)
     rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -242,12 +240,19 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (10.4.2)
-    rb-fsevent (0.9.5)
-    rb-inotify (0.9.5)
-      ffi (>= 0.5.0)
-    request_store (1.1.0)
-    responders (2.1.0)
-      railties (>= 4.2.0, < 5)
+    ransack (1.8.10)
+      actionpack (>= 3.0, < 5.2)
+      activerecord (>= 3.0, < 5.2)
+      activesupport (>= 3.0, < 5.2)
+      i18n
+    rb-fsevent (0.10.3)
+    rb-inotify (0.10.0)
+      ffi (~> 1.0)
+    request_store (1.4.1)
+      rack (>= 1.4)
+    responders (2.4.1)
+      actionpack (>= 4.2.0, < 6.0)
+      railties (>= 4.2.0, < 6.0)
     sass (3.4.13)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -257,7 +262,7 @@ GEM
       tilt (~> 1.1)
     sassy-buttons (0.2.6)
       compass (>= 0.12.2)
-    select2-rails (3.5.9.3)
+    select2-rails (3.5.10)
       thor (~> 0.14)
     simple_form (3.1.0)
       actionpack (~> 4.0)
@@ -272,7 +277,6 @@ GEM
       railties (>= 3.1, < 5.0)
       slim (~> 3.0)
     slop (3.6.0)
-    spinner.rb (0.3.0)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -289,9 +293,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
-    turbolinks (2.5.3)
+    turbolinks (2.5.4)
       coffee-rails
-    tvdeyen-handles_sortable_columns (0.1.5)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (2.7.1)
@@ -304,7 +307,7 @@ GEM
     unicorn-rails (2.2.0)
       rack
       unicorn
-    warden (1.2.3)
+    warden (1.2.7)
       rack (>= 1.0)
 
 PLATFORMS
@@ -316,7 +319,7 @@ DEPENDENCIES
   bootstrap-sass
   bootswatch-rails
   capistrano
-  capistrano-alchemy!
+  capistrano-alchemy (~> 1.0.0)
   capistrano-rails
   capistrano-secrets-yml (~> 1.0.0)
   capistrano-uberspace!

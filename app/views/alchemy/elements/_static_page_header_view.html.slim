@@ -1,7 +1,7 @@
 - cache(element) do
   = element_view_for(element) do |el|
     .top-background
-      = el.render :image, {size: "1300x400"}, class: "shadow head-image"
+      = el.render :image, {size: "1300x400", crop: true}, class: "shadow head-image"
       .container
         .row.relative
           .col-sm-8.col-sm-offset-4

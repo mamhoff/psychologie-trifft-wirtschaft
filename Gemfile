@@ -12,9 +12,6 @@ gem 'sass-rails'
 # bundle exec rake doc:rails generates the API under doc/api.
 # gem 'sdoc', '~> 0.4.0',        group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-# gem 'spring',      group: :development
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -43,9 +40,9 @@ gem 'simple_form'
 # for cool deployment
 gem 'capistrano'
 gem 'capistrano-uberspace', github: 'mamhoff/capistrano-uberspace', branch: 'master', group: :development, require: false
-gem 'capistrano-alchemy', github: 'AlchemyCMS/capistrano-alchemy', branch: 'master', group: :development, require: false
+gem 'capistrano-alchemy', '~> 1.0.0', require: false
 gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
 
-gem "alchemy_cms", github: 'AlchemyCMS/alchemy_cms', branch: 'master'
-gem "alchemy-devise", github: 'AlchemyCMS/alchemy-devise', branch: 'master'
+gem "alchemy_cms", github: 'AlchemyCMS/alchemy_cms', branch: '3.3-stable'
+gem "alchemy-devise", github: 'AlchemyCMS/alchemy-devise', branch: '3.3-stable'
