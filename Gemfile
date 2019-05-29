@@ -44,5 +44,5 @@ gem 'capistrano-alchemy', '~> 1.0.0', require: false
 gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
 
-gem "alchemy_cms", '~> 3.4.0'
-gem "alchemy-devise", '~> 3.4.0'
+gem "alchemy_cms", '~> 3.5.0'
+gem "alchemy-devise", '~> 3.5.0'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190529140140) do
+ActiveRecord::Schema.define(version: 20190529171703) do
 
   create_table "alchemy_attachments", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -29,17 +29,19 @@ ActiveRecord::Schema.define(version: 20190529140140) do
   add_index "alchemy_attachments", ["file_uid"], name: "index_alchemy_attachments_on_file_uid", using: :btree
 
   create_table "alchemy_cells", force: :cascade do |t|
-    t.integer  "page_id",    limit: 4
+    t.integer  "page_id",    limit: 4,   null: false
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
+  add_index "alchemy_cells", ["page_id"], name: "index_alchemy_cells_on_page_id", using: :btree
+
   create_table "alchemy_contents", force: :cascade do |t|
     t.string   "name",         limit: 255
-    t.string   "essence_type", limit: 255
-    t.integer  "essence_id",   limit: 4
-    t.integer  "element_id",   limit: 4
+    t.string   "essence_type", limit: 255, null: false
+    t.integer  "essence_id",   limit: 4,   null: false
+    t.integer  "element_id",   limit: 4,   null: false
     t.integer  "position",     limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
@@ -48,11 +50,12 @@ ActiveRecord::Schema.define(version: 20190529140140) do
   end
 
   add_index "alchemy_contents", ["element_id", "position"], name: "index_contents_on_element_id_and_position", using: :btree
+  add_index "alchemy_contents", ["essence_id", "essence_type"], name: "index_alchemy_contents_on_essence_id_and_essence_type", unique: true, using: :btree
 
   create_table "alchemy_elements", force: :cascade do |t|
     t.string   "name",              limit: 255
     t.integer  "position",          limit: 4
-    t.integer  "page_id",           limit: 4
+    t.integer  "page_id",           limit: 4,                     null: false
     t.boolean  "public",                          default: true
     t.boolean  "folded",                          default: false
     t.boolean  "unique",                          default: false
@@ -65,6 +68,7 @@ ActiveRecord::Schema.define(version: 20190529140140) do
     t.integer  "parent_element_id", limit: 4
   end
 
+  add_index "alchemy_elements", ["cell_id"], name: "index_alchemy_elements_on_cell_id", using: :btree
   add_index "alchemy_elements", ["page_id", "parent_element_id"], name: "index_alchemy_elements_on_page_id_and_parent_element_id", using: :btree
   add_index "alchemy_elements", ["page_id", "position"], name: "index_elements_on_page_id_and_position", using: :btree
 
@@ -101,6 +105,8 @@ ActiveRecord::Schema.define(version: 20190529140140) do
     t.datetime "updated_at",                null: false
     t.string   "link_text",     limit: 255
   end
+
+  add_index "alchemy_essence_files", ["attachment_id"], name: "index_alchemy_essence_files_on_attachment_id", using: :btree
 
   create_table "alchemy_essence_htmls", force: :cascade do |t|
     t.text     "source",     limit: 65535
@@ -140,6 +146,8 @@ ActiveRecord::Schema.define(version: 20190529140140) do
     t.string   "render_size",     limit: 255
   end
 
+  add_index "alchemy_essence_pictures", ["picture_id"], name: "index_alchemy_essence_pictures_on_picture_id", using: :btree
+
   create_table "alchemy_essence_richtexts", force: :cascade do |t|
     t.text     "body",          limit: 65535
     t.text     "stripped_body", limit: 65535
@@ -174,10 +182,12 @@ ActiveRecord::Schema.define(version: 20190529140140) do
   end
 
   create_table "alchemy_folded_pages", force: :cascade do |t|
-    t.integer "page_id", limit: 4
-    t.integer "user_id", limit: 4
+    t.integer "page_id", limit: 4,                 null: false
+    t.integer "user_id", limit: 4,                 null: false
     t.boolean "folded",            default: false
   end
+
+  add_index "alchemy_folded_pages", ["page_id", "user_id"], name: "index_alchemy_folded_pages_on_page_id_and_user_id", unique: true, using: :btree
 
   create_table "alchemy_languages", force: :cascade do |t|
     t.string   "name",           limit: 255
@@ -191,7 +201,7 @@ ActiveRecord::Schema.define(version: 20190529140140) do
     t.integer  "updater_id",     limit: 4
     t.boolean  "default",                    default: false
     t.string   "country_code",   limit: 255, default: "",      null: false
-    t.integer  "site_id",        limit: 4
+    t.integer  "site_id",        limit: 4,                     null: false
     t.string   "locale",         limit: 255
   end
 
@@ -206,6 +216,7 @@ ActiveRecord::Schema.define(version: 20190529140140) do
     t.datetime "updated_at",             null: false
   end
 
+  add_index "alchemy_legacy_page_urls", ["page_id"], name: "index_alchemy_legacy_page_urls_on_page_id", using: :btree
   add_index "alchemy_legacy_page_urls", ["urlname"], name: "index_alchemy_legacy_page_urls_on_urlname", using: :btree
 
   create_table "alchemy_pages", force: :cascade do |t|
@@ -244,6 +255,7 @@ ActiveRecord::Schema.define(version: 20190529140140) do
   add_index "alchemy_pages", ["locked_at", "locked_by"], name: "index_alchemy_pages_on_locked_at_and_locked_by", using: :btree
   add_index "alchemy_pages", ["parent_id", "lft"], name: "index_pages_on_parent_id_and_lft", using: :btree
   add_index "alchemy_pages", ["public_on", "public_until"], name: "index_alchemy_pages_on_public_on_and_public_until", using: :btree
+  add_index "alchemy_pages", ["rgt"], name: "index_alchemy_pages_on_rgt", using: :btree
   add_index "alchemy_pages", ["urlname"], name: "index_pages_on_urlname", using: :btree
 
   create_table "alchemy_pictures", force: :cascade do |t|
@@ -324,8 +336,15 @@ ActiveRecord::Schema.define(version: 20190529140140) do
     t.datetime "created_at"
   end
 
+  add_index "taggings", ["context"], name: "index_taggings_on_context", using: :btree
   add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id", using: :btree
   add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
+  add_index "taggings", ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy", using: :btree
+  add_index "taggings", ["taggable_id"], name: "index_taggings_on_taggable_id", using: :btree
+  add_index "taggings", ["taggable_type"], name: "index_taggings_on_taggable_type", using: :btree
+  add_index "taggings", ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type", using: :btree
+  add_index "taggings", ["tagger_id"], name: "index_taggings_on_tagger_id", using: :btree
 
   create_table "tags", force: :cascade do |t|
     t.string  "name",           limit: 255
@@ -334,4 +353,8 @@ ActiveRecord::Schema.define(version: 20190529140140) do
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
+  add_foreign_key "alchemy_cells", "alchemy_pages", column: "page_id", name: "alchemy_cells_page_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "alchemy_contents", "alchemy_elements", column: "element_id", name: "alchemy_contents_element_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "alchemy_elements", "alchemy_cells", column: "cell_id", name: "alchemy_elements_cell_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "alchemy_elements", "alchemy_pages", column: "page_id", name: "alchemy_elements_page_id_fkey", on_update: :cascade, on_delete: :cascade
 end
