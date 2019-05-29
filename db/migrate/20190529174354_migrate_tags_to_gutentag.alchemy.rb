@@ -34,7 +34,9 @@ class MigrateTagsToGutentag < ActiveRecord::Migration[5.0]
     if index_exists? :taggings, [:taggable_id, :taggable_type], name: 'taggings_idy'
       rename_index :taggings, 'taggings_idy', 'index_gutentag_taggings_on_taggable_id_and_taggable_type'
     else
-      add_index :taggings, [:taggable_type, :taggable_id]
+      unless index_exists? :taggings, [:taggable_type, :taggable_id]
+        add_index :taggings, [:taggable_type, :taggable_id]
+      end
     end
     add_column :taggings, :updated_at, :datetime
     change_column_null :taggings, :tag_id, false
