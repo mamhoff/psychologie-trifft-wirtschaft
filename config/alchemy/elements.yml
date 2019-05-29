@@ -36,16 +36,6 @@
       validate:
         - presence: true
 
-- name: topics
-  contents:
-    - name: title
-      type: EssenceText
-      validate:
-      - presence: true
-  available_contents:
-    - name: topic
-      type: EssenceText
-
 - name: testimonial
   contents:
     - name: citee
