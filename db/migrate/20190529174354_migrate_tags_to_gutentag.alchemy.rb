@@ -4,17 +4,32 @@
 class MigrateTagsToGutentag < ActiveRecord::Migration[5.0]
   def up
     return if table_exists?(:gutentag_tags)
-
-    remove_index :taggings, :taggable_id
-    remove_column :taggings, :tagger_id, :integer
-    remove_index :taggings, :taggable_type
-    remove_column :taggings, :tagger_type, :string
-    remove_index :taggings, column: [:taggable_id, :taggable_type, :context], name: 'index_taggings_on_taggable_id_and_taggable_type_and_context'
-    remove_column :taggings, :context, :string, limit: 128
+    if index_exists? :taggings, :taggable_id
+      remove_index :taggings, :taggable_id
+    end
+    if column_exists? :taggings, :tagger_id
+      remove_column :taggings, :tagger_id, :integer
+    end
+    if index_exists? :taggings, :taggable_type
+      remove_index :taggings, :taggable_type
+    end
+    if column_exists? :taggings, :tagger_type
+      remove_column :taggings, :tagger_type, :string
+    end
+    if index_exists? :taggings, column: [:taggable_id, :taggable_type, :context], name: 'index_taggings_on_taggable_id_and_taggable_type_and_context'
+      remove_index :taggings, column: [:taggable_id, :taggable_type, :context], name: 'index_taggings_on_taggable_id_and_taggable_type_and_context'
+    end
+    if column_exists? :taggings, :context
+      remove_column :taggings, :context, :string, limit: 128
+    end
     if index_exists? :taggings, [:tag_id, :taggable_id, :taggable_type], unique: true, name: 'taggings_idx'
-      rename_index :taggings, 'taggings_idx', 'unique_taggings'
+      unless index_exists? :taggings, [:tag_id, :taggable_id, :taggable_type], unique: true, name: 'unique_taggings'
+        rename_index :taggings, 'taggings_idx', 'unique_taggings'
+      end
     else
-      add_index :taggings, [:taggable_type, :taggable_id, :tag_id], unique: true, name: 'unique_taggings'
+      unless index_exists? :taggings, [:tag_id, :taggable_id, :taggable_type], unique: true, name: 'unique_taggings'
+        add_index :taggings, [:taggable_type, :taggable_id, :tag_id], unique: true, name: 'unique_taggings'
+      end
     end
     if index_exists? :taggings, [:taggable_id, :taggable_type], name: 'taggings_idy'
       rename_index :taggings, 'taggings_idy', 'index_gutentag_taggings_on_taggable_id_and_taggable_type'
