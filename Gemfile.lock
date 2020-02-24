@@ -1,14 +1,10 @@
 GIT
   remote: git://github.com/mamhoff/capistrano-uberspace.git
-  revision: 187d03121914029bfe53cab2cacb57cfbd7f0843
-  branch: uberspace-6
+  revision: db8868ead0e8e024afaaf18744c58e5a1f9f2494
+  branch: master
   specs:
-    capistrano-uberspace (0.0.1)
+    capistrano-uberspace (0.0.7)
       capistrano (~> 3.1)
-      capistrano-bundler (~> 1.1)
-      capistrano-secrets-yml (~> 1.0.0)
-      mysql2 (>= 0.3.11)
-      unicorn-rails
 
 GEM
   remote: https://rubygems.org/
@@ -335,4 +331,4 @@ DEPENDENCIES
   unicorn-rails
 
 BUNDLED WITH
-   1.17.1
+   1.17.3
