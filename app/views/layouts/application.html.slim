@@ -14,11 +14,4 @@ html
     = render 'alchemy/preview_mode_code'
     = render "alchemy/menubar"
     = render_elements(from_page: "header", only: ["contact_form"])
-    #footer.shadow
-      .container
-        .row
-          = render_elements from_page: "footer", only: ["address"]
-          .col-md-8.link-container
-            .links
-              = render_elements from_page: "footer", only: ["link"]
-    = render_elements from_page: "footer", only: ["html_snippet"]
+    = render 'footer'

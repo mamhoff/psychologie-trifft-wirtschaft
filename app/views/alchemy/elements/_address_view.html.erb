@@ -1,0 +1,24 @@
+<%- cache(element) do %>
+  <%= element_view_for(element) do |el| %>
+    <div class="company-name">
+      <%= el.render :company_name %>
+    </div>
+    <div class="name">
+      <%= el.render :name %>
+    </div>
+    <div class="street">
+      <%= el.render :street %>
+    </div>
+    <div class="place">
+      <%= el.render :place %>
+    </div>
+    <div class="contact">
+      <div class="phone">
+        <%= el.render :phone %>
+      </div>
+      <div class="email">
+        <%= el.render :email %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

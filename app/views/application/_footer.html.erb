@@ -1,0 +1,15 @@
+<footer id="footer">
+  <div class="links">
+    <div class="border"></div>
+    <%= render_elements from_page: 'footer', only: ['link'] %>
+  </div>
+  <div class="address">
+    <div class="border"></div>
+    <%= render_elements from_page: 'footer', only: ['address'] %>
+  </div>
+  <div class="legal">
+    <div class="border"></div>
+    <%= render_elements from_page: 'footer', only: ['legal'] %>
+  </div>
+  <%= render_elements from_page: 'footer', only: ['html_snippet'] %>
+</footer>

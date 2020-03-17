@@ -31,4 +31,4 @@
 - name: footer
   layoutpage: true
   unique: true
-  elements: [address, link, html_snippet]
+  elements: [address, link, html_snippet, legal]

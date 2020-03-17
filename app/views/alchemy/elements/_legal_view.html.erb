@@ -1,0 +1,13 @@
+<%- cache(element) do %>
+  <%= element_view_for(element) do |el| %>
+    <div class="impressum">
+      <%= el.render :impressum %>
+    </div>
+    <div class="datenschutz">
+      <%= el.render :datenschutz %>
+    </div>
+    <div class="copyright">
+      <%= el.render :copyright %>
+    </div>
+  <% end %>
+<% end %>

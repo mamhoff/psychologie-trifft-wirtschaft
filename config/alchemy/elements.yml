@@ -127,6 +127,19 @@
       settings:
         linkable: true
 
+- name: legal
+  contents:
+  - name: impressum
+    type: EssenceText
+    settings:
+      linkable: true
+  - name: datenschutz
+    type: EssenceText
+    settings:
+      linkable: true
+  - name: copyright
+    type: EssenceText
+
 - name: html_snippet
   contents:
     - name: snippet
