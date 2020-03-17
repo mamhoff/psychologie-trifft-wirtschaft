@@ -16,3 +16,12 @@
 @import "base";
 
 @import "footer";
+
+// Import base elements
+@import "base_elements/breakpoints";
+@import "base_elements/colors";
+@import "base_elements/fonts";
+
+// Import blocks
+@import "blocks/base";
+@import "blocks/footer";
