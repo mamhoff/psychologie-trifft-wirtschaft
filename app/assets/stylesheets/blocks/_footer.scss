@@ -1,0 +1,54 @@
+footer#footer {
+  background-color: $dark-green;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  @include for-tablet-portrait-up {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto;
+    @include for-tablet-landscape-up {
+      padding: 50px 100px;
+      @include for-desktop-up {
+        padding: 50px 170px;
+      }
+    }
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+  .border {
+    width: 33%;
+    border-top: solid 2px $mustard;
+    margin-bottom: 2rem;
+  }
+  .address {
+    .company-name {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .contact {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .legal {
+    .copyright {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .link, .impressum, .datenschutz {
+    margin-bottom: 1rem;
+  }
+  .social {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
+    a {
+      text-decoration: none;
+    }
+  }
+}
