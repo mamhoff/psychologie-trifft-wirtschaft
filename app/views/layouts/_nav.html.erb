@@ -1,0 +1,10 @@
+<div class="navbar navbar-fixed-top shadow" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+<i class="fa fa-bars">
+</i></button><a class="navbar-brand" href="/">
+<%= image_tag "ptw.svg" %>
+</a></div><div class="navbar-collapse collapse navbar-responsive-collapse">
+<%= render_navigation({ from_page: @root_page }, { class: "nav  navbar-nav navbar-right" }) %>
+</div></div></div>
