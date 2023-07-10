@@ -24,6 +24,7 @@ install_plugin Capistrano::SCM::Git
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
+require 'capistrano/yarn'
 # require 'capistrano/passenger'
 
 # I'll continue with this once all the rest works.

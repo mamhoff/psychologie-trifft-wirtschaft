@@ -30,6 +30,7 @@ gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem "font-awesome-rails"
 gem 'uglifier'
+gem 'capistrano-yarn'
 
 # jquery plugin fun
 # gem 'jquery-scrollto-rails'
