@@ -45,7 +45,7 @@ gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
 gem "alchemy_i18n"
 gem "alchemy_cms", '~> 4.2.0'
-gem "alchemy-devise", '~> 4.1.0'
+gem "alchemy-devise", '~> 4.2.0'
 
 gem "ed25519"
 gem "bcrypt_pbkdf"
