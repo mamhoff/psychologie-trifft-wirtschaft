@@ -43,7 +43,7 @@ gem 'capistrano-uberspace', git: 'https://github.com/mamhoff/capistrano-uberspac
 gem 'capistrano-alchemy', '~> 1.0.0', require: false
 gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
-gem "alchemy_i18n"
+gem "alchemy_i18n", "~> 2.3.0"
 gem "alchemy_cms", '~> 4.6.0'
 gem "alchemy-devise", '~> 4.6.0'
 
