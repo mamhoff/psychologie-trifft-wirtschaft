@@ -40,7 +40,7 @@ gem 'simple_form'
 # for cool deployment
 gem 'capistrano'
 gem 'capistrano-uberspace', git: 'https://github.com/mamhoff/capistrano-uberspace.git', branch: 'master', group: :development
-gem 'capistrano-alchemy', '~> 1.0.0', require: false
+gem 'capistrano-alchemy', '~> 2.0.0', require: false
 gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
 gem "alchemy_i18n", "~> 2.3.0"
