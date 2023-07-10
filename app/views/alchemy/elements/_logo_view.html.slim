@@ -1,9 +1,9 @@
-- cache(element) do
+- cache(logo_view) do
   .col-xs-12.col-sm-4
-    = element_view_for(element) do |el|
+    = element_view_for(logo_view) do |el|
       = image_tag "ptw.svg", class: "circle shadow"
       // = el.render :image, size: "300x300"
   .col-xs-12.col-sm-8
-    = element_view_for(element) do |el|
+    = element_view_for(logo_view) do |el|
       .logo_text
         = simple_format el.render :logo_text

@@ -1,34 +1,34 @@
-# == This file defines the page layouts for new pages.
-#
-# For further informations please see http://guides.alchemy-cms.com/create_page_layouts.html
-
 - name: home
   cache: false
   elements:
-    - tag_manager_data_layer
-    - teaser
-    - testimonial
+  - tag_manager_data_layer
+  - teaser
+  - testimonial
 
 - name: static
   elements:
-    - tag_manager_data_layer
-    - static_page_header
-    - static_page
-    - testimonial
-    - html_snippet
+  - tag_manager_data_layer
+  - static_page_header
+  - static_page
+  - testimonial
+  - html_snippet
   autogenerate:
-    - static_page
+  - static_page
 
 - name: header
   layoutpage: true
   unique: true
   elements:
-    - logo
-    - contact_form
+  - logo
+  - contact_form
   autogenerate:
-    - logo
+  - logo
 
 - name: footer
   layoutpage: true
   unique: true
-  elements: [address, link, html_snippet, legal]
+  elements:
+  - address
+  - link
+  - html_snippet
+  - legal

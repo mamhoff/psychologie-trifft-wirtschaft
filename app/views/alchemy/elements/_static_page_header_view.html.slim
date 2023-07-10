@@ -1,5 +1,5 @@
-- cache(element) do
-  = element_view_for(element) do |el|
+- cache(static_page_header_view) do
+  = element_view_for(static_page_header_view) do |el|
     .top-background
       = el.render :image, {size: "1300x400", crop: true}, class: "shadow head-image"
       .container

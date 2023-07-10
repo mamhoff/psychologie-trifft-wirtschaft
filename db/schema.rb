@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_174354) do
+ActiveRecord::Schema.define(version: 2023_07_10_101503) do
 
   create_table "alchemy_attachments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
@@ -60,7 +60,9 @@ ActiveRecord::Schema.define(version: 2019_05_29_174354) do
     t.integer "updater_id"
     t.integer "cell_id"
     t.integer "parent_element_id"
+    t.boolean "fixed", default: false, null: false
     t.index ["cell_id"], name: "index_alchemy_elements_on_cell_id"
+    t.index ["fixed"], name: "index_alchemy_elements_on_fixed"
     t.index ["page_id", "parent_element_id"], name: "index_alchemy_elements_on_page_id_and_parent_element_id"
     t.index ["page_id", "position"], name: "index_elements_on_page_id_and_position"
   end
@@ -306,7 +308,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_174354) do
     t.integer "taggable_id", null: false
     t.string "taggable_type", null: false
     t.datetime "created_at", null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "updated_at", null: false
     t.index ["tag_id", "taggable_id", "taggable_type"], name: "unique_taggings", unique: true
     t.index ["tag_id"], name: "index_gutentag_taggings_on_tag_id"
     t.index ["taggable_id", "taggable_type"], name: "index_gutentag_taggings_on_taggable_id_and_taggable_type"
