@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@alchemy_cms/admin@~5.0.10":
+  version "5.0.10"
+  resolved "https://registry.yarnpkg.com/@alchemy_cms/admin/-/admin-5.0.10.tgz#5ae3f5cd324a1311c3ccbb518f17802c334d7b57"
+  integrity sha512-JsX0Ug+Ci0efgbjUAB3NCq5WYpEcSX+vxX7FOAJcdZedyRUAgwOpYbKT04esldtIna79Nf9ZCzH6KFR+NCmrbw==
+  dependencies:
+    sortablejs "^1.10.2"
+
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.2.1.tgz#99e8e11851128b8702cd57c33684f1d0f260b630"
@@ -6343,6 +6350,11 @@ sort-keys@^1.0.0:
   integrity sha512-vzn8aSqKgytVik0iwdBEi+zevbTYZogewTUM6dtpmGwEcdzbub/TX4bCzRhebDCRC3QzXgJsLRKB2V/Oof7HXg==
   dependencies:
     is-plain-obj "^1.0.0"
+
+sortablejs@^1.10.2:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/sortablejs/-/sortablejs-1.15.0.tgz#53230b8aa3502bb77a29e2005808ffdb4a5f7e2a"
+  integrity sha512-bv9qgVMjUMf89wAvM6AxVvS/4MX3sPeN0+agqShejLU5z5GX4C75ow1O2e5k4L6XItUyAK3gH6AxSbXrOM5e8w==
 
 source-list-map@^2.0.0:
   version "2.0.1"
