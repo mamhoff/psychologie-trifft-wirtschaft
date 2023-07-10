@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_10_101503) do
+ActiveRecord::Schema.define(version: 2023_07_10_102241) do
 
   create_table "alchemy_attachments", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
@@ -120,6 +120,13 @@ ActiveRecord::Schema.define(version: 2023_07_10_101503) do
     t.integer "updater_id"
   end
 
+  create_table "alchemy_essence_pages", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci", force: :cascade do |t|
+    t.integer "page_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["page_id"], name: "index_alchemy_essence_pages_on_page_id"
+  end
+
   create_table "alchemy_essence_pictures", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "picture_id"
     t.string "caption"
@@ -205,6 +212,34 @@ ActiveRecord::Schema.define(version: 2023_07_10_101503) do
     t.datetime "updated_at", null: false
     t.index ["page_id"], name: "index_alchemy_legacy_page_urls_on_page_id"
     t.index ["urlname"], name: "index_alchemy_legacy_page_urls_on_urlname"
+  end
+
+  create_table "alchemy_nodes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "title"
+    t.string "url"
+    t.boolean "nofollow", default: false, null: false
+    t.boolean "external", default: false, null: false
+    t.boolean "folded", default: false, null: false
+    t.integer "parent_id"
+    t.integer "lft", null: false
+    t.integer "rgt", null: false
+    t.integer "depth", default: 0, null: false
+    t.integer "page_id"
+    t.integer "language_id", null: false
+    t.integer "creator_id"
+    t.integer "updater_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "site_id", null: false
+    t.index ["creator_id"], name: "index_alchemy_nodes_on_creator_id"
+    t.index ["language_id"], name: "index_alchemy_nodes_on_language_id"
+    t.index ["lft"], name: "index_alchemy_nodes_on_lft"
+    t.index ["page_id"], name: "index_alchemy_nodes_on_page_id"
+    t.index ["parent_id"], name: "index_alchemy_nodes_on_parent_id"
+    t.index ["rgt"], name: "index_alchemy_nodes_on_rgt"
+    t.index ["site_id"], name: "index_alchemy_nodes_on_site_id"
+    t.index ["updater_id"], name: "index_alchemy_nodes_on_updater_id"
   end
 
   create_table "alchemy_pages", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -326,4 +361,8 @@ ActiveRecord::Schema.define(version: 2023_07_10_101503) do
   add_foreign_key "alchemy_contents", "alchemy_elements", column: "element_id", name: "alchemy_contents_element_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "alchemy_elements", "alchemy_cells", column: "cell_id", name: "alchemy_elements_cell_id_fkey", on_update: :cascade, on_delete: :cascade
   add_foreign_key "alchemy_elements", "alchemy_pages", column: "page_id", name: "alchemy_elements_page_id_fkey", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "alchemy_essence_pages", "alchemy_pages", column: "page_id"
+  add_foreign_key "alchemy_nodes", "alchemy_languages", column: "language_id"
+  add_foreign_key "alchemy_nodes", "alchemy_pages", column: "page_id", on_delete: :cascade
+  add_foreign_key "alchemy_nodes", "alchemy_sites", column: "site_id", on_delete: :cascade
 end

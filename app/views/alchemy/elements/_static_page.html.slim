@@ -1,5 +1,5 @@
-- cache(static_page_view) do
-  = element_view_for(static_page_view) do |el|
+- cache(static_page) do
+  = element_view_for(static_page) do |el|
     .top-background
       = el.render :image, {size: "1300x400"}, class: "img-responsive head-image"
       .container

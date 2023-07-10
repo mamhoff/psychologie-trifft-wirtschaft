@@ -1,0 +1,10 @@
+<%- cache(tag_manager_data_layer) do -%>
+  <%= element_view_for(tag_manager_data_layer) do |el| -%>
+    <div class="data_key">
+      <%= el.render :data_key %>
+    </div>
+    <div class="data_value">
+      <%= el.render :data_value %>
+    </div>
+  <%- end -%>
+<%- end -%>
