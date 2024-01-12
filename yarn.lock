@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@alchemy_cms/admin@~5.2.7":
-  version "5.2.7"
-  resolved "https://registry.yarnpkg.com/@alchemy_cms/admin/-/admin-5.2.7.tgz#f7e4209d939df482003c6d1dde4cda10654bd779"
-  integrity sha512-p+v7vM1ZDRZ4LhSxKf56jBya7ixXMb7P6AqtSRkom4kG1LvclGVAx/o4jG8MIpLVppw6uPc09VKURSkk94cLdQ==
+"@alchemy_cms/admin@~5.3.8":
+  version "5.3.8"
+  resolved "https://registry.yarnpkg.com/@alchemy_cms/admin/-/admin-5.3.8.tgz#6bee1afa3dfd3b1b893c674a3e0992358c0da74a"
+  integrity sha512-oTUfOB1LiRdaLaKDPJVGj+bFoESbNsSw20xIm1xdGAlIW+ba7AKb7csyKszhMXw2VXYQprixvAuu8TyxPbsbzw==
   dependencies:
     sortablejs "^1.10.2"
 
