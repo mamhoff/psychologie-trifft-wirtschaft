@@ -45,7 +45,7 @@ gem 'capistrano-alchemy', '~> 2.0.0', require: false
 gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
 gem "alchemy_i18n", "~> 2.3.0"
-gem "alchemy_cms", '~> 5.1.0'
+gem "alchemy_cms", '~> 5.2.0'
 gem "alchemy-devise", '~> 5.1.0'
 
 gem "ed25519"
