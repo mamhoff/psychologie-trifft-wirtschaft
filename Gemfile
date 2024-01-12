@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', "~> 6.0.0"
 # Use MySQL as the database for Active Record, just like on production
 gem 'mysql2', '~> 0.4.0'
 # Use SCSS for stylesheets
@@ -44,9 +44,9 @@ gem 'capistrano-uberspace', git: 'https://github.com/mamhoff/capistrano-uberspac
 gem 'capistrano-alchemy', '~> 2.0.0', require: false
 gem 'capistrano-secrets-yml', '~> 1.0.0', group: :development, require: false
 
-gem "alchemy_i18n", "~> 2.3.0"
-gem "alchemy_cms", '~> 5.3.0'
-gem "alchemy-devise", '~> 5.1.0'
+gem "alchemy_i18n", "~> 3.2.0"
+gem "alchemy_cms", '~> 6.0.0'
+gem "alchemy-devise", '~> 6.0.0'
 
 gem "ed25519"
 gem "bcrypt_pbkdf"

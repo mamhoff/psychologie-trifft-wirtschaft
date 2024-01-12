@@ -1,6 +1,6 @@
 #fullpage.container
   .row.section#header
-    = render_elements(from_page: "header", only: ["logo"]) if @page.language_root
+    = render_elements(from_page: Alchemy::Page.find_by(name: "header"), only: ["logo"]) if @page.language_root
   = render_elements only: [:teaser]
   .row.testimonials
     = render_elements only: [:testimonial]
