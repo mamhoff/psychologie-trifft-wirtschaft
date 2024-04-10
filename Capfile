@@ -29,7 +29,6 @@ require 'capistrano/yarn'
 
 # I'll continue with this once all the rest works.
 require 'capistrano/uberspace'
-require 'capistrano/secrets_yml'
 require 'capistrano/alchemy'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
