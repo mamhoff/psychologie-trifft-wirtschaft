@@ -1,5 +1,5 @@
 = element_view_for(teaser) do |el|
-  = link_to teaser.contents.find_by(name: "link").essence.link do
+  = link_to teaser.value_for(:link) do
     .row.section
       .col-xs-12.col-sm-4
         .nav_image

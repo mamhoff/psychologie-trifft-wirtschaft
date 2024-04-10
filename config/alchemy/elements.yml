@@ -3,151 +3,151 @@
 # For further informations please see http://guides.alchemy-cms.com/create_elements.html
 
 - name: logo
-  contents:
-    - name: image
-      type: EssencePicture
+  ingredients:
+    - role: image
+      type: Picture
       validate:
         - presence: true
-    - name: logo_text
-      type: EssenceHtml
+    - role: logo_text
+      type: Html
       validate:
         - presence: true
 
 - name: teaser
-  contents:
-    - name: link
-      type: EssenceLink
+  ingredients:
+    - role: link
+      type: Link
       validate:
         - presence: true
-    - name: image
-      type: EssencePicture
+    - role: image
+      type: Picture
       validate:
         - presence: true
-    - name: super_title
-      type: EssenceText
+    - role: super_title
+      type: Text
       validate:
         - presence: true
-    - name: title
-      type: EssenceText
+    - role: title
+      type: Text
       validate:
         - presence: true
-    - name: body
-      type: EssenceRichtext
+    - role: body
+      type: Richtext
       validate:
         - presence: true
 
 - name: testimonial
-  contents:
-    - name: citee
-      type: EssenceText
+  ingredients:
+    - role: citee
+      type: Text
       validate:
         - presence: true
-    - name: quote
-      type: EssenceText
+    - role: quote
+      type: Text
       validate:
         - presence: true
 
 - name: contact_form
-  contents:
-    - name: mail_from
-      type: EssenceText
+  ingredients:
+    - role: mail_from
+      type: Text
       validate:
         - presence: true
         - format: email
-    - name: mail_to
-      type: EssenceText
+    - role: mail_to
+      type: Text
       validate:
         - presence: true
         - format: email
-    - name: subject
-      type: EssenceText
+    - role: subject
+      type: Text
       validate:
         - presence: true
-    - name: success_page
-      type: EssenceSelect
+    - role: success_page
+      type: Select
       validate:
         - presence: true
 
 - name: static_page_header
-  contents:
-    - name: image
-      type: EssencePicture
+  ingredients:
+    - role: image
+      type: Picture
       validate:
         - presence: true
-    - name: super_title
-      type: EssenceText
+    - role: super_title
+      type: Text
       validate:
         - presence: true
 
 - name: static_page
-  contents:
-    - name: title
-      type: EssenceText
+  ingredients:
+    - role: title
+      type: Text
       validate:
         - presence: true
-    - name: teaser
-      type: EssenceRichtext
-    - name: body
-      type: EssenceRichtext
+    - role: teaser
+      type: Richtext
+    - role: body
+      type: Richtext
       validate:
         - presence: true
 
 
 - name: address
-  contents:
-    - name: company_name
-      type: EssenceText
+  ingredients:
+    - role: company_name
+      type: Text
       validate:
         - presence: true
-    - name: name
-      type: EssenceText
+    - role: name
+      type: Text
       validate:
         - presence: true
-    - name: street
-      type: EssenceText
+    - role: street
+      type: Text
       validate:
         - presence: true
-    - name: place
-      type: EssenceText
+    - role: place
+      type: Text
       validate:
         - presence: true
-    - name: phone
-      type: EssenceText
+    - role: phone
+      type: Text
       validate:
         - presence: true
-    - name: email
-      type: EssenceText
+    - role: email
+      type: Text
       validate:
         - presence: true
 
 - name: link
-  contents:
-    - name: link
-      type: EssenceText
+  ingredients:
+    - role: link
+      type: Text
       settings:
         linkable: true
 
 - name: legal
-  contents:
-  - name: impressum
-    type: EssenceText
+  ingredients:
+  - role: impressum
+    type: Text
     settings:
       linkable: true
-  - name: datenschutz
-    type: EssenceText
+  - role: datenschutz
+    type: Text
     settings:
       linkable: true
-  - name: copyright
-    type: EssenceText
+  - role: copyright
+    type: Text
 
 - name: html_snippet
-  contents:
-    - name: snippet
-      type: EssenceHtml
+  ingredients:
+    - role: snippet
+      type: Html
 
 - name: tag_manager_data_layer
-  contents:
-    - name: data_key
-      type: EssenceText
-    - name: data_value
-      type: EssenceText
+  ingredients:
+    - role: data_key
+      type: Text
+    - role: data_value
+      type: Text
