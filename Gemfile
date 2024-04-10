@@ -20,9 +20,6 @@ gem 'puma'
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 
-# Use debugger
-gem 'pry-rails', group: [:development, :test]
-gem 'pry'
 # for funnier templates
 gem 'slim'
 gem 'slim-rails'
