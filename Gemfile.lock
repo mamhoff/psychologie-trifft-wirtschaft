@@ -163,6 +163,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     dragonfly (1.4.0)
       addressable (~> 2.3)
       multi_json (~> 1.0)
@@ -372,6 +376,7 @@ DEPENDENCIES
   capistrano-secrets-yml (~> 1.0.0)
   capistrano-uberspace!
   capistrano-yarn
+  dotenv-rails (~> 2.0)
   ed25519
   font-awesome-rails
   listen

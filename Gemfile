@@ -52,3 +52,5 @@ gem "ed25519"
 gem "bcrypt_pbkdf"
 
 gem "listen"
+
+gem "dotenv-rails", "~> 2.0"
