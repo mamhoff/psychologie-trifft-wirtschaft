@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', "~> 6.0.0"
+gem 'rails', "~> 6.1.0"
 # Use MySQL as the database for Active Record, just like on production
 gem 'mysql2', '~> 0.4.0'
 # Use SCSS for stylesheets
