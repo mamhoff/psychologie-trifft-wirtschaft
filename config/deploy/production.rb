@@ -4,7 +4,7 @@
 # You can define all roles on a single server, or split them:
 
 set :stage, :production
-set :branch, 'master'
+set :branch, 'main'
 server 'giacobini.uberspace.de', user: 'tholen', roles: %w{app db web}, my_property: :my_value
 set :deploy_to, "/home/tholen/#{fetch :application}"
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
