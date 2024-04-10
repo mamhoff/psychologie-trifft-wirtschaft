@@ -231,7 +231,7 @@ GEM
     minitest (5.22.3)
     multi_json (1.15.0)
     mutex_m (0.2.0)
-    mysql2 (0.4.10)
+    mysql2 (0.5.6)
     net-imap (0.4.10)
       date
       net-protocol
@@ -384,7 +384,7 @@ DEPENDENCIES
   ed25519
   font-awesome-rails
   listen
-  mysql2 (~> 0.4.0)
+  mysql2
   puma
   rails (~> 6.1.0)
   sass-rails
